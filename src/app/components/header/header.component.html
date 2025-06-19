@@ -1,1 +1,30 @@
-<p>header works!</p>
+<mat-sidenav-container class="container">
+    <!-- Menú lateral para móviles -->
+    <mat-sidenav #sidenav class="mobile-menu" mode="over">
+      <a mat-list-item routerLink="/about-me" (click)="sidenav.close()"><mat-icon>person</mat-icon>Sobre mí</a>
+      <a mat-list-item routerLink="/proyects" (click)="sidenav.close()"><mat-icon>work</mat-icon>Proyectos</a>
+      <a mat-list-item routerLink="/contact" (click)="sidenav.close()"><mat-icon>mail</mat-icon>Contacto</a>
+    </mat-sidenav>
+  
+    <!-- Contenido principal -->
+    <mat-sidenav-content>
+      <mat-toolbar color="primary" class="toolbar">
+        <!-- Botón del menú SOLO en móvil -->
+        <button mat-icon-button (click)="sidenav.toggle()" class="mobile-toggle">
+          <mat-icon>menu</mat-icon>
+        </button>
+  
+        <a class="logo" routerLink="/" title="Inicio"><span class="my-name">&lt;p&gt;JomaorX&lt;/p&gt;</span></a>
+  
+        <!-- Enlaces de navegación SOLO en escritorio -->
+        <span class="spacer"></span>
+        <nav class="desktop-nav">
+          <a mat-button routerLink="/about-me">Sobre mí</a>
+          <a mat-button routerLink="/proyects">Proyectos</a>
+          <a mat-button routerLink="/contact">Contacto</a>
+        </nav>
+      </mat-toolbar>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+      

@@ -1,4 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
 
+:root {
+    @include mat.card-overrides((
+            elevated-container-color: orange,
+            elevated-container-elevation: red,
+            title-text-size: 1.2rem,
+            title-text-weight: bold,
+            subtitle-text-color: #3b6d8a,
+            outlined-outline-color: #6faefc));
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

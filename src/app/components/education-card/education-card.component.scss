@@ -1,0 +1,53 @@
+.education-card {
+    margin: 2rem auto; // ✅ centrado automático en horizontal
+    max-width: 80%; // ✅ ancho máximo que quieras
+    width: 90%; // ✅ que se adapte en móvil
+    padding: 2rem;
+    display: block; // ✅ por si Flex estaba interfiriendo
+
+    // Opcional: sombra suave
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    background-color: #E7EDF4;
+
+    // mat-chip {
+    //         color: #001e41 !important;
+    //         font-weight: 500;
+    //         border-radius: 20px;
+    //     }
+}
+
+mat-card {
+    padding: 3%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.title{
+    color: #001e41;
+}
+
+
+.left-block {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    .header-titles {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.right-block {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #555;
+}

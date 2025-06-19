@@ -1,0 +1,30 @@
+<mat-card class="education-card" appearance="outlined">
+    <div class="header-container">
+      <div class="left-block">
+        <img [src]="data.image" [alt]="data.institution" />
+        <div class="header-titles">
+          <mat-card-title class="title">{{ data.title }}</mat-card-title>
+          <mat-card-subtitle>
+            <mat-icon>{{ data.icon || 'school' }}</mat-icon>
+            {{ data.institution }}
+          </mat-card-subtitle>
+        </div>
+      </div>
+      <div class="right-block">
+        <span>{{ data.period }}<br/>{{ data.location }}</span>
+      </div>
+    </div>
+  
+    <mat-card-content>
+      <p>{{ data.subtitle }}</p>
+    </mat-card-content>
+  
+    <mat-card-footer>
+      <mat-chip-set color="primary" selected>
+        @for (tag of data.tags; track $index) {
+            <mat-chip>{{ tag }}</mat-chip>
+        }
+      </mat-chip-set>
+    </mat-card-footer>
+  </mat-card>
+  

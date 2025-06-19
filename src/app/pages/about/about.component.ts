@@ -1,11 +1,149 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { MaterialModule } from '../../material.module';
+import { EducationCardComponent } from "../../components/education-card/education-card.component";
+import { Education } from '../../models/Education';
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [MaterialModule, EducationCardComponent],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+  styleUrl: './about.component.scss',
 })
 export class AboutComponent {
+  readonly panelOpenState = signal(false);
+  certs: Education[] = [
+    {
+      title: 'Grado Medio Sistemas microinformáticos y redes',
+      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      institution: 'IES Leonardo Da Vinci',
+      location: 'Albacete',
+      period: 'Sept 2014 - Jun 2016',
+      image: 'insignia.png',
+      icon: 'location_on',
+      tags: [
+        'Instalación y configuración',
+        'Mantenimiento',
+        'Soporte técnico',
+        'Seguridad informática',
+        'Redes',
+        'Administración de sistemas',
+        'Ofimática',
+        'Montaje y reparación',
+        'HTML y CSS',
+      ],
+    },
+    {
+      title: 'Grado Superior - Desarrollo de aplicaciones web',
+      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      institution: 'MEDAC',
+      location: 'Albacete',
+      period: 'Sept 2023 - Jun 2025',
+      image: 'cerebro.png',
+      icon: 'location_on',
+      tags: [
+        'JavaScript',
+        'Java',
+        'PHP',
+        'MySQL',
+        'MongoDB',
+        'Administración de sistemas',
+        'Ofimática',
+        'Montaje y reparación',
+        'HTML y CSS',
+      ],
+    },
+  ];
 
+  otros: Education[] = [
+    {
+      title: 'Angular - Curso Completo',
+      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      institution: 'Manuel Agudo',
+      location: 'Youtube',
+      period: '5 Horas',
+      image: 'certificado.png',
+      icon: 'location_on',
+      tags: ['Angular'],
+    },
+    {
+      title: 'Fundamentos de React',
+      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      institution: 'Manuel Agudo',
+      location: 'OpenWebinars',
+      period: '6 Horas',
+      image: 'certificado.png',
+      icon: 'location_on',
+      tags: ['React'],
+    },
+    {
+      title: 'Curso de Javascript - Nivel JUNIOR',
+      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      institution: 'Soy Dalto',
+      location: 'Youtube',
+      period: '10 Horas',
+      image: 'certificado.png',
+      icon: 'location_on',
+      tags: ['Javascript'],
+    },
+    {
+      title: 'Curso de Javascript - Nivel MID',
+      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      institution: 'Soy Dalto',
+      location: 'Youtube',
+      period: '8 Horas',
+      image: 'certificado.png',
+      icon: 'location_on',
+      tags: ['Javascript'],
+    },
+    {
+      title: 'Curso de Javascript - Nivel MASTER',
+      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      institution: 'Soy Dalto',
+      location: 'Youtube',
+      period: '10 Horas',
+      image: 'certificado.png',
+      icon: 'location_on',
+      tags: ['Javascript'],
+    },
+    {
+      title: 'Curso de Python',
+      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      institution: 'Soy Dalto',
+      location: 'Youtube',
+      period: '8 Horas',
+      image: 'certificado.png',
+      icon: 'location_on',
+      tags: ['Python'],
+    },
+    {
+      title: 'Curso GIT y GITHUB',
+      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      institution: 'Midudev',
+      location: 'Youtube',
+      period: '4 Horas',
+      image: 'certificado.png',
+      icon: 'location_on',
+      tags: ['GIT', 'GITHUB'],
+    },
+    {
+      title: 'Curso de HTML y CSS Completo',
+      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      institution: 'Soy Dalto',
+      location: 'Youtube',
+      period: '24 Horas',
+      image: 'certificado.png',
+      icon: 'location_on',
+      tags: ['HTML', 'CSS'],
+    },
+    {
+      title: 'Aprende ingles desde cero',
+      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      institution: 'Sr Richard',
+      location: 'Udemy',
+      period: '25 Horas',
+      image: 'certificado.png',
+      icon: 'location_on',
+      tags: ['Ingles'],
+    },
+  ];
 }

@@ -1,0 +1,27 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f4f8, #e3eaf2);
+    img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+
+        .about-text {
+            max-width: 600px;
+        }
+    }
+}

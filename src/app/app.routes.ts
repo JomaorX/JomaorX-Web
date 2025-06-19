@@ -6,8 +6,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'sobre-mi', component: AboutComponent },
-  { path: 'proyectos', component: ProjectsComponent },
-  { path: 'contacto', component: ContactComponent },
+  { path: 'about-me', component: AboutComponent },
+  { path: 'proyects', component: ProjectsComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: '' },
 ];
