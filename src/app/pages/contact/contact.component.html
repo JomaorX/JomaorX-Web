@@ -1,1 +1,56 @@
-<p>contact works!</p>
+<div class="contact-wrapper">
+    <mat-card class="contact-card">
+      <mat-card-header>
+        <mat-card-title>Contacto</mat-card-title>
+        <mat-card-subtitle>¿En qué puedo ayudarte?</mat-card-subtitle>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <form class="formContainer" [formGroup]="contactForm" 
+        action="https://formsubmit.co/martinez97.pro@gamil.com"
+        method="POST"
+        (ngSubmit)="onSubmit()">
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="name" placeholder="Tu nombre completo" />
+            @if (name.invalid && (name.dirty || name.touched)) {
+              <mat-error>El nombre es obligatorio</mat-error>
+            }
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" placeholder="tucorreo@ejemplo.com" />
+            @if (email.invalid && (email.dirty || email.touched)) {
+              @if (email.hasError('required')) {
+                <mat-error>El email es obligatorio</mat-error>
+              } @else if (email.hasError('email')) {
+                <mat-error>El formato del email no es válido</mat-error>
+              }
+            }
+            <mat-icon matSuffix>alternate_email</mat-icon>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Mensaje</mat-label>
+            <textarea matInput rows="4" formControlName="message" placeholder="Escribe tu mensaje aquí"></textarea>
+            @if (message.invalid && (message.dirty || message.touched)) {
+              <mat-error>El mensaje es obligatorio</mat-error>
+            }
+            @if (message.invalid && (message.dirty || message.touched)) {
+              <mat-icon matSuffix>comments_disabled</mat-icon>
+            } @else {
+              <mat-icon matSuffix>comment</mat-icon>
+            }
+          </mat-form-field>
+  
+          <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid">
+            Enviar
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

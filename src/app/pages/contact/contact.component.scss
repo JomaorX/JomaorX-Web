@@ -1,0 +1,40 @@
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.contact-card {
+    width: 100%;
+    max-width: 600px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .contact-wrapper {
+        padding: 1rem;
+    }
+
+    .contact-card {
+        margin: 0 0.5rem;
+    }
+
+    mat-card-title {
+        font-size: 1.4rem;
+    }
+
+    mat-card-subtitle {
+        font-size: 0.95rem;
+    }
+}
