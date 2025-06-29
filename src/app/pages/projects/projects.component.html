@@ -1,1 +1,9 @@
-<app-construction/>
+<div class="main-container">
+    <h1>Proyectos</h1>
+
+    <div class="container project-container">
+        @for (project of projects; track $index) {
+            <app-project-card  [data]="project"></app-project-card>
+        }
+    </div>
+</div>

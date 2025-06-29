@@ -1,1 +1,13 @@
-<p>project-card works!</p>
+<div class="item-container">
+    <div class="laptop-container">
+        <img src="pantalla.png" alt="Laptop" class="laptop-image">
+        <div class="laptop-screen">
+          <img [src]="data.photo" alt="foto del proyecto {{data.title}}">
+        </div>
+      </div>
+      <div class="info-item">
+        <h3 class="title-item">{{data.title}}</h3>
+      <p class="subtitle-item">{{data.subtitle}}</p>
+      <a matButton="elevated" routerLink="/projects/{{data.id}}" target="_blank">Ver Detalles</a>
+      </div>
+</div>
