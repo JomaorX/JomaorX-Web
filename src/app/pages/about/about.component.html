@@ -1,41 +1,46 @@
-<div class="about-container">
+<div class="main-container">
+  <div class="about-container">
     <div class="about-text">
-      <h2>Sobre mí</h2>
+      <h1>Sobre mí</h1>
       <p>
         Soy José Miguel Martínez, desarrollador web con interés en crear soluciones simples y funcionales. Me gusta trabajar con tecnologías modernas como Angular, TypeScript y Node.js, pero también me apasiona aprender cosas nuevas y retarme constantemente.
       </p>
       <p>
         Cuando no estoy escribiendo código, me encontrarás explorando nuevas ideas, tomando café, y probablemente creando algo que aún no sé si funcionará.
       </p>
-      <a mat-stroked-button color="accent" href="cv.pdf" download target="_blank">
+      <a matButton="outlined" href="cv.pdf" download target="_blank">
         Descargar CV
       </a>
     </div>
-  
+
     <img src="yo.jpeg" alt="Foto de José Miguel" />
-      
-</div>
+  </div>
 
-  <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title><mat-icon>school</mat-icon>Educación </mat-panel-title>
-      </mat-expansion-panel-header>
-
-      @for (cert of certs; track $index) {
-        <app-education-card [data]="cert"></app-education-card>
-        }
-
-    </mat-expansion-panel>
-    <mat-expansion-panel>
+  <div class="acordeon-container">
+    <mat-accordion>
+      <mat-expansion-panel>
         <mat-expansion-panel-header>
-          <mat-panel-title><mat-icon>verified</mat-icon>Cursos Adicionales </mat-panel-title>
+          <mat-panel-title>
+            <mat-icon>school</mat-icon>
+            Educación
+          </mat-panel-title>
         </mat-expansion-panel-header>
-        
-        @for (cert of otros; track $index) {
-            <app-education-card [data]="cert"></app-education-card>
+        @for (cert of certs; track $index) {
+          <app-education-card [data]="cert"></app-education-card>
         }
-
       </mat-expansion-panel>
-  </mat-accordion>
   
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>verified</mat-icon>
+            Cursos Adicionales
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        @for (cert of otros; track $index) {
+          <app-education-card [data]="cert"></app-education-card>
+        }
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

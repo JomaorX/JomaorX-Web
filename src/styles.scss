@@ -18,3 +18,14 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+mat-chip i {
+  font-size: 1.2rem;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+/* Opcional: ajustar el padding del chip para mejor espaciado */
+mat-chip {
+  padding: 0.5rem 1rem;
+}
+

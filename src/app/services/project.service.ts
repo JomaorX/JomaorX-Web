@@ -14,6 +14,7 @@ export class ProjectService {
       photo: 'chatFlow.png',
       code: 'https://github.com/JomaorX/ChatFlow',
       link: 'https://chatflow-f2y6.onrender.com/',
+      skills: ['JavaScript', 'Nodejs', 'Nodemon', 'HTML5', 'CSS3'],
     },
     {
       id: 2,
@@ -23,6 +24,7 @@ export class ProjectService {
       photo: 'pokeData.png',
       code: 'https://github.com/JomaorX/PokeData',
       link: 'https://pokedata-28w9.onrender.com',
+      skills: ['JavaScript', 'Nodejs', 'Nodemon', 'HTML5', 'CSS3'],
     },
     {
       id: 3,
@@ -34,6 +36,19 @@ export class ProjectService {
         'https://github.com/JomaorX/ReserV-back',
       ],
       link: '/construction',
+      skills: [
+        'AngularJS',
+        'TypeScript',
+        'Nodejs',
+        'Express',
+        'Sequelize',
+        'JWT',
+        'Nodemon',
+        'Nodemailer',
+        'MySql',
+        'HTML5',
+        'CSS3',
+      ],
     },
     {
       id: 4,
@@ -43,6 +58,7 @@ export class ProjectService {
       photo: 'f1Fan.png',
       code: 'https://github.com/JomaorX/F1FAN',
       link: 'https://f1fan.onrender.com/',
+      skills: ['AngularJS', 'TypeScript', 'HTML5', 'CSS3'],
     },
     {
       id: 5,
@@ -51,6 +67,16 @@ export class ProjectService {
       photo: 'scraperX.png',
       code: 'https://github.com/JomaorX/ScraperX',
       link: 'https://scraperx-jifh.onrender.com/',
+      skills: ['JavaScript', 'Nodejs', 'Nodemon', 'HTML5', 'CSS3'],
+    },
+    {
+      id: 6,
+      title: 'Bakrery',
+      subtitle: 'Proyecto de una web informativa de reposteria.',
+      photo: 'bakrery.png',
+      code: 'https://github.com/JomaorX/Bakery',
+      link: 'https://bakery-m4by.onrender.com/',
+      skills: ['React', 'rxjs', 'HTML5', 'CSS3'],
     },
   ];
 
