@@ -1,6 +1,7 @@
 <mat-card class="education-card" appearance="outlined">
     <div class="header-container">
       <div class="left-block">
+        <i class="devicon-{{data.image.toLowerCase()}}-plain colored"></i>
         <img [src]="data.image" [alt]="data.institution" />
         <div class="header-titles">
           <mat-card-title class="title">{{ data.title }}</mat-card-title>
