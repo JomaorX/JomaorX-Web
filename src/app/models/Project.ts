@@ -3,4 +3,6 @@ export interface Project {
   title: string;
   subtitle: string;
   photo: string;
+  code: string | string[];
+  link?: string;
 }
