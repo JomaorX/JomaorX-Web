@@ -1,1 +1,29 @@
-<p>footer works!</p>
+<footer class="footer-container">
+    <div class="footer-content">
+      
+      <!-- Copyright centrado -->
+      <div class="footer-center">
+        <p>&copy; {{ currentYear }} {{ authorName }}. Todos los derechos reservados.</p>
+      </div>
+  
+      <!-- Iconos a la derecha -->
+      <div class="footer-social">
+        <a href="https://github.com/jomaorx" target="_blank" aria-label="GitHub">
+          <img src="github.png" alt="GitHub" title="GitHub" />
+        </a>
+        <a href="https://linkedin.com/in/martinez97pro" target="_blank" aria-label="LinkedIn">
+          <img src="linkedin.png" alt="LinkedIn"  title="LinkedIn"/>
+        </a>
+        <a href="mailto:martinez97.pro@gmail.com" aria-label="Email">
+          <img src="email.png" alt="Email" title="Email"/>
+        </a>
+      </div>
+    </div>
+  
+    <!-- Enlaces adicionales abajo y centrados -->
+    <div class="footer-links">
+      <a routerLink="/privacy">Política de Privacidad</a>
+      <a routerLink="/contact">Contacto</a>
+    </div>
+  </footer>
+  
