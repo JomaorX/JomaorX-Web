@@ -17,18 +17,20 @@
 html,
 body {
   body {
+      font-family: "Montserrat", "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 0;
       min-height: 100vh;
-      /* Cambia height por min-height */
+      position: relative;
       background-color: #409ba5d5;
       background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
       background-repeat: repeat;
       background-attachment: fixed;
-      /* Añade esto para controlar el tamaño del patrón */ }
+     }
 }
 
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  
 }
 
 mat-chip i {

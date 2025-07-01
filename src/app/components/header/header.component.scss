@@ -1,63 +1,110 @@
-*{
+/* Estilos generales */
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-mat-sidenav {
-    width: 240px; // o el valor que prefieras
-    max-width: 80vw; // para que nunca ocupe más del 80% del ancho de pantalla
+
+/* Contenedor del sidenav */
+
+
+/* Menú móvil (oculto por defecto) */
+.mobile-menu {
+    padding: 18px;
+    width: 70%;
+    display: none;
+    height: fit-content;
+    a,
+    mat-icon,
+    span {
+        vertical-align: middle;
+    }
+
 }
 
-.logo {
-    color: inherit;
-    text-decoration: none;
+.mobile-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Asegura el icono a la izquierda */
+    height: 48px;
+    /* o el alto de tu item */
+
+    mat-icon {
+        margin-right: 16px;
+        z-index: 1;
+    }
+
+    span {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 500;
+        pointer-events: none;
+        /* Evita interferencias con el click */
+    }
 }
 
-.my-name {
-    font-family: "Syne Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-    color: #333;
-    font-weight: bolder;
-}
-
+/* Toolbar */
 .toolbar {
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    align-items: center;
 }
 
+/* Logo */
+.logo {
+    color: inherit;
+    text-decoration: none;
+    margin-left: 16px;
+}
+
+.my-name {
+    font-family: "Syne Mono", monospace;
+    font-weight: bolder;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Espaciador */
 .spacer {
     flex: 1 1 auto;
 }
 
+/* Navegación desktop */
 .desktop-nav {
     display: flex;
     gap: 10px;
+    margin-right: 16px;
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
 }
 
-.mobile-toggle {
+/* Botón menú móvil (oculto por defecto) */
+.mobile-menu-button {
     display: none;
 }
 
+/* Media queries para responsive */
 @media (max-width: 768px) {
-    .desktop-nav {
-        display: none;
+
+    /* Mostrar menú móvil y su botón */
+    .mobile-menu {
+        display: block;
     }
 
-    .mobile-toggle {
+    .mobile-menu-button {
         display: inline-flex;
     }
-}
-.example-spacer {
-    flex: 1 1 auto;
-}
 
-.mobile-menu {
-    height: fit-content;
-    
-    a, mat-icon, span {
-        margin: 8px;
-        vertical-align: middle;
-    }
-}
+    /* Ocultar navegación desktop */
+    .desktop-nav {
+        display: none;
+    } }
