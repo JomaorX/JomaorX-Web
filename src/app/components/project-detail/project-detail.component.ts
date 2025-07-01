@@ -7,7 +7,7 @@ import { ProjectCardComponent } from "../project-card/project-card.component";
 
 @Component({
   selector: 'app-project-detail',
-  imports: [MaterialModule, ProjectCardComponent],
+  imports: [MaterialModule],
   templateUrl: './project-detail.component.html',
   styleUrl: './project-detail.component.scss',
 })

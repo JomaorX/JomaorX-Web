@@ -48,17 +48,20 @@
     text-align: left;
     /* Alineación izquierda para títulos */
     padding: 20px;
+    box-shadow: 2px 2px 5px #fff3;
+    background-color: #fff3;
+    border-radius: 8px;
 }
 
 .title-item {
+    color: #3f51b5;
     font-size: 2rem;
-    margin-bottom: 10px;
 }
 
 .subtitle-item {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d2d2d;
 }
 
 /* Botón (ajusta según tu tema de Angular Material) */
@@ -75,18 +78,19 @@ a[matButton] {
 @media (max-width: 768px) {
     .item-container {
         grid-template-columns: 1fr;
-        /* Una sola columna */
-    }
-
-    .laptop-screen {
-        top: 10%;
-        left: 12%;
-        width: 76%;
-        height: 55%;
     }
 
     .info-item {
         text-align: center;
-        /* Centra la info en móvil */
         padding: 20px 0;
-    } }
+    }
+
+    .title-item {
+        font-size: 1.5rem;
+    }
+
+    .subtitle-item {
+        font-size: 1rem;
+    }
+
+}

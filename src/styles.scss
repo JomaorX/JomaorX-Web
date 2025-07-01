@@ -1,22 +1,35 @@
 @use '@angular/material' as mat;
 
 :root {
-    @include mat.card-overrides((
-            title-text-size: 1.2rem,
-            title-text-weight: bold,
-            subtitle-text-color: #3b6d8a,
-            outlined-outline-color: #6faefc));
-            
-        @include mat.expansion-overrides((
-            container-background-color: #f0f2f4,
-            header-text-color: #001e41,
-            header-indicator-color: #2f6db4,
-            header-hover-state-layer-color: rgba(47, 109, 180, 0.05),
-            header-focus-state-layer-color: rgba(47, 109, 180, 0.1),
-            actions-divider-color: #ccddee));
+  @include mat.card-overrides((title-text-size: 1.2rem,
+      title-text-weight: bold,
+      subtitle-text-color: #3b6d8a,
+      outlined-outline-color: #6faefc));
+
+  @include mat.expansion-overrides((container-background-color: #f0f2f4,
+      header-text-color: #001e41,
+      header-indicator-color: #2f6db4,
+      header-hover-state-layer-color: rgba(47, 109, 180, 0.05),
+      header-focus-state-layer-color: rgba(47, 109, 180, 0.1),
+      actions-divider-color: #ccddee));
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+  body {
+      min-height: 100vh;
+      /* Cambia height por min-height */
+      background-color: #409ba5d5;
+      background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+      background-repeat: repeat;
+      background-attachment: fixed;
+      /* Añade esto para controlar el tamaño del patrón */ }
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 mat-chip i {
   font-size: 1.2rem;
@@ -26,6 +39,10 @@ mat-chip i {
 
 /* Opcional: ajustar el padding del chip para mejor espaciado */
 mat-chip {
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.6rem;
 }
 
+@media (max-width: 768px){
+  mat-chip {
+      padding: 0; }
+}

@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { MaterialModule } from '../../material.module';
 import { EducationCardComponent } from "../../components/education-card/education-card.component";
 import { Education } from '../../models/Education';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-about',
-  imports: [MaterialModule, EducationCardComponent],
+  imports: [MaterialModule, EducationCardComponent, RouterLink],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })
@@ -29,7 +30,8 @@ export class AboutComponent {
         'Administración de sistemas',
         'Ofimática',
         'Montaje y reparación',
-        'HTML y CSS',
+        'HTML5',
+        'CSS3',
       ],
     },
     {
@@ -49,7 +51,8 @@ export class AboutComponent {
         'Administración de sistemas',
         'Ofimática',
         'Montaje y reparación',
-        'HTML y CSS',
+        'HTML5',
+        'CSS3',
       ],
     },
   ];
@@ -63,7 +66,7 @@ export class AboutComponent {
       period: '5 Horas',
       image: 'angular.png',
       icon: 'location_on',
-      tags: ['Angular'],
+      tags: ['AngularJS'],
     },
     {
       title: 'Fundamentos de React',
@@ -133,7 +136,7 @@ export class AboutComponent {
       period: '24 Horas',
       image: 'marcas.png',
       icon: 'location_on',
-      tags: ['HTML', 'CSS'],
+      tags: ['HTML5', 'CSS3'],
     },
     {
       title: 'Aprende ingles desde cero',

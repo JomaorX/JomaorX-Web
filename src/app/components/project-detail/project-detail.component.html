@@ -11,9 +11,9 @@
 } @else {
 <div class="main-container">
   <section class="container-1">
-    <h1>{{ project?.title }}</h1>
-    <p>{{ project?.subtitle }}</p>
-    <a matFab extended routerLink=".">
+    <h1>{{ project.title }}</h1>
+    <p>{{ project.subtitle }}</p>
+    <a matFab extended r href="{{ project.link }}" target="_blank">
       <mat-icon>public</mat-icon>
       Ver Web
     </a>
@@ -23,20 +23,20 @@
       <img src="pantalla.png" alt="Laptop" class="laptop-image" />
       <div class="laptop-screen">
         <img
-          [src]="project?.photo"
-          alt="foto del proyecto {{ project?.title }}"
+          [src]="project.photo"
+          alt="foto del proyecto {{ project.title }}"
         />
       </div>
     </div>
   </section>
   <section class="container-3">
     <h3>Descripción general del proyecto</h3>
-    <p>{{ project?.description }}</p>
+    <p>{{ project.description }}</p>
   </section>
   <section class="container-4">
     <h3>Heramientas utilizadas</h3>
     <mat-chip-set aria-label="Dog selection">
-      @for (skill of project?.skills; track $index) {
+      @for (skill of project.skills; track $index) {
       <mat-chip>
         <i class="devicon-{{ skill.toLowerCase() }}-plain colored"></i>
         {{ skill }}
@@ -47,11 +47,11 @@
   <section class="container-4">
     <h3>Enlaces</h3>
     <div class="buttons-container">
-      <a matButton="filled" href="{{ project?.link }}" target="_blank">
+      <a matButton="filled" href="{{ project.link }}" target="_blank">
         <mat-icon>public</mat-icon>
         Web
       </a>
-      <a matButton="outlined" href="{{ project?.code }}" target="_blank">
+      <a matButton="outlined" href="{{ project.code }}" target="_blank">
         <mat-icon>code</mat-icon>
         Código
       </a>
