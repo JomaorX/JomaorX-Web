@@ -15,7 +15,7 @@ export class AboutComponent {
   certs: Education[] = [
     {
       title: 'Grado Medio Sistemas microinformáticos y redes',
-      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      subtitle: '',
       institution: 'IES Leonardo Da Vinci',
       location: 'Albacete',
       period: 'Sept 2014 - Jun 2016',
@@ -36,7 +36,7 @@ export class AboutComponent {
     },
     {
       title: 'Grado Superior - Desarrollo de aplicaciones web',
-      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      subtitle: '',
       institution: 'MEDAC',
       location: 'Albacete',
       period: 'Sept 2023 - Jun 2025',
@@ -60,7 +60,7 @@ export class AboutComponent {
   otros: Education[] = [
     {
       title: 'Angular - Curso Completo',
-      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      subtitle: '',
       institution: 'Manuel Agudo',
       location: 'Youtube',
       period: '5 Horas',
@@ -70,7 +70,7 @@ export class AboutComponent {
     },
     {
       title: 'Fundamentos de React',
-      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      subtitle: '',
       institution: 'Manuel Agudo',
       location: 'OpenWebinars',
       period: '6 Horas',
@@ -80,7 +80,7 @@ export class AboutComponent {
     },
     {
       title: 'Curso de Javascript - Nivel JUNIOR',
-      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      subtitle: '',
       institution: 'Soy Dalto',
       location: 'Youtube',
       period: '10 Horas',
@@ -90,7 +90,7 @@ export class AboutComponent {
     },
     {
       title: 'Curso de Javascript - Nivel MID',
-      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      subtitle: '',
       institution: 'Soy Dalto',
       location: 'Youtube',
       period: '8 Horas',
@@ -100,7 +100,7 @@ export class AboutComponent {
     },
     {
       title: 'Curso de Javascript - Nivel MASTER',
-      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      subtitle: '',
       institution: 'Soy Dalto',
       location: 'Youtube',
       period: '10 Horas',
@@ -110,7 +110,7 @@ export class AboutComponent {
     },
     {
       title: 'Curso de Python',
-      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      subtitle: '',
       institution: 'Soy Dalto',
       location: 'Youtube',
       period: '8 Horas',
@@ -120,7 +120,7 @@ export class AboutComponent {
     },
     {
       title: 'Curso GIT y GITHUB',
-      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      subtitle: '',
       institution: 'Midudev',
       location: 'Youtube',
       period: '4 Horas',
@@ -130,7 +130,7 @@ export class AboutComponent {
     },
     {
       title: 'Curso de HTML y CSS Completo',
-      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      subtitle: '',
       institution: 'Soy Dalto',
       location: 'Youtube',
       period: '24 Horas',
@@ -140,7 +140,7 @@ export class AboutComponent {
     },
     {
       title: 'Aprende ingles desde cero',
-      subtitle: 'Módulos de hardware, redes, soporte y seguridad informática.',
+      subtitle: '',
       institution: 'Sr Richard',
       location: 'Udemy',
       period: '25 Horas',
