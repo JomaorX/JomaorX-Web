@@ -54,13 +54,12 @@
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
-        gap: 1rem;
         align-items: center;
     }
 
-        .footer-social a img{
-            width: 16px;
-        }
+    .footer-social a img {
+        width: 22px;
+    }
 
     .footer-social {
         justify-content: center;
