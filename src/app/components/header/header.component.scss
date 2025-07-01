@@ -14,7 +14,9 @@ mat-sidenav {
 }
 
 .my-name {
-    font-family: 'Courier New', monospace;
+    font-family: "Syne Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
     color: #333;
     font-weight: bolder;
 }
@@ -49,4 +51,13 @@ mat-sidenav {
 }
 .example-spacer {
     flex: 1 1 auto;
+}
+
+.mobile-menu {
+    height: fit-content;
+    
+    a, mat-icon, span {
+        margin: 8px;
+        vertical-align: middle;
+    }
 }

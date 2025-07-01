@@ -1,30 +1,58 @@
-<mat-sidenav-container class="container">
-    <!-- Menú lateral para móviles -->
-    <mat-sidenav #sidenav class="mobile-menu" mode="over">
-      <a mat-list-item routerLink="/about-me" (click)="sidenav.close()"><mat-icon>person</mat-icon>Sobre mí</a>
-      <a mat-list-item routerLink="/proyects" (click)="sidenav.close()"><mat-icon>work</mat-icon>Proyectos</a>
-      <a mat-list-item routerLink="/contact" (click)="sidenav.close()"><mat-icon>mail</mat-icon>Contacto</a>
-    </mat-sidenav>
-  
-    <!-- Contenido principal -->
-    <mat-sidenav-content>
-      <mat-toolbar color="primary" class="toolbar">
-        <!-- Botón del menú SOLO en móvil -->
-        <button mat-icon-button (click)="sidenav.toggle()" class="mobile-toggle">
-          <mat-icon>menu</mat-icon>
-        </button>
-  
-        <a class="logo" routerLink="/" title="Inicio"><span class="my-name">&lt;p&gt;JomaorX&lt;/p&gt;</span></a>
-  
-        <!-- Enlaces de navegación SOLO en escritorio -->
-        <span class="spacer"></span>
-        <nav class="desktop-nav">
-          <a mat-button routerLink="/about-me">Sobre mí</a>
-          <a mat-button routerLink="/proyects">Proyectos</a>
-          <a mat-button routerLink="/contact">Contacto</a>
-        </nav>
-      </mat-toolbar>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-  
-      
+<mat-sidenav-container class="sidenav-container">
+  <!-- Menú lateral para móviles -->
+  <mat-sidenav #sidenav class="mobile-menu" mode="over" fixedInViewport="true" fixedTopGap="56">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/" (click)="sidenav.close()">
+        <mat-icon>home</mat-icon>
+        <span>Inicio</span>
+      </a>
+      <a mat-list-item routerLink="/about-me" (click)="sidenav.close()">
+        <mat-icon>person</mat-icon>
+        <span>Sobre mí</span>
+      </a>
+      <a mat-list-item routerLink="/proyects" (click)="sidenav.close()">
+        <mat-icon>work</mat-icon>
+        <span>Proyectos</span>
+      </a>
+      <a mat-list-item routerLink="/contact" (click)="sidenav.close()">
+        <mat-icon>mail</mat-icon>
+        <span>Contacto</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Contenido principal -->
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="toolbar">
+      <!-- Botón del menú para móvil -->
+      <button mat-icon-button (click)="sidenav.toggle()" class="mobile-menu-button">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <a class="logo" routerLink="/" title="Inicio">
+        <span class="my-name">&lt; JomaorX /&gt;</span>
+      </a>
+
+      <!-- Enlaces de navegación para escritorio -->
+      <span class="spacer"></span>
+      <nav class="desktop-nav">
+        <a mat-button routerLink="/" class="nav-link">
+          <mat-icon>home</mat-icon>
+          <span>Inicio</span>
+        </a>
+        <a mat-button routerLink="/about-me" class="nav-link">
+          <mat-icon>person</mat-icon>
+          <span>Sobre mí</span>
+        </a>
+        <a mat-button routerLink="/proyects" class="nav-link">
+          <mat-icon>work</mat-icon>
+          <span>Proyectos</span>
+        </a>
+        <a mat-button routerLink="/contact" class="nav-link">
+          <mat-icon>mail</mat-icon>
+          <span>Contacto</span>
+        </a>
+      </nav>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>

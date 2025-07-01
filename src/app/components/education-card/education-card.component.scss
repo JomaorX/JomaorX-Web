@@ -57,7 +57,7 @@ mat-card {
 
 .right-block {
     text-align: right;
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: #555;
     min-width: 120px;
 }
@@ -100,11 +100,12 @@ mat-chip {
     }
 
     .right-block {
-        text-align: left;
         width: 100%;
-        margin-top: 0.5rem;
-        padding-left: 2.5rem;
-        /* Alineación con el contenido */
+
+        span {
+            text-align: right;
+            font-size: 0.9rem;
+        }
     }
 
     .header-container img {
