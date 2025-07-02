@@ -12,6 +12,7 @@ export class ProjectService {
       subtitle:
         'Plataforma de mensajería instantánea rápida, segura y fácil de usar. Conéctate con amigos, familiares y colegas en tiempo real.',
       photo: 'chatFlow.png',
+      description: '🚧 Próximamente... 🚧',
       code: 'https://github.com/JomaorX/ChatFlow',
       link: 'https://chatflow-f2y6.onrender.com/',
       skills: ['JavaScript', 'Nodejs', 'Nodemon', 'HTML5', 'CSS3'],
@@ -22,6 +23,7 @@ export class ProjectService {
       subtitle:
         'Web sobre el fascinante mundo Pokémon. Gracias a la PokeAPI, te ofrecemos una herramienta gratuita y completa para explorar todas las criaturas de este universo.',
       photo: 'pokeData.png',
+      description: '🚧 Próximamente... 🚧',
       code: 'https://github.com/JomaorX/PokeData',
       link: 'https://pokedata-28w9.onrender.com',
       skills: ['JavaScript', 'Nodejs', 'Nodemon', 'HTML5', 'CSS3'],
@@ -31,6 +33,7 @@ export class ProjectService {
       title: 'ReserV',
       subtitle: 'Web de gestión de peluquerias y reservas para clientes.',
       photo: 'reserV.png',
+      description: '🚧 Próximamente... 🚧',
       code: {
         front: 'https://github.com/JomaorX/ReserV-front',
         back: 'https://github.com/JomaorX/ReserV-back',
@@ -56,6 +59,7 @@ export class ProjectService {
       subtitle:
         'En F1FAN, encontrarás toda la información sobre la Fórmula 1 en un solo lugar. Desde los últimos resultados de carreras hasta noticias exclusivas, calendarios, equipos y pilotos.',
       photo: 'f1Fan.png',
+      description: '🚧 Próximamente... 🚧',
       code: 'https://github.com/JomaorX/F1FAN',
       link: 'https://f1fan.onrender.com/',
       skills: ['AngularJS', 'TypeScript', 'HTML5', 'CSS3'],
@@ -65,6 +69,7 @@ export class ProjectService {
       title: 'ScraperX',
       subtitle: 'Proyecto de una web de scrapeo de productos.',
       photo: 'scraperX.png',
+      description: '🚧 Próximamente... 🚧',
       code: 'https://github.com/JomaorX/ScraperX',
       link: 'https://scraperx-jifh.onrender.com/',
       skills: ['JavaScript', 'Nodejs', 'Nodemon', 'HTML5', 'CSS3'],
@@ -74,6 +79,7 @@ export class ProjectService {
       title: 'Bakrery',
       subtitle: 'Proyecto de una web informativa de reposteria.',
       photo: 'bakrery.png',
+      description: '🚧 Próximamente... 🚧',
       code: 'https://github.com/JomaorX/Bakery',
       link: 'https://bakery-m4by.onrender.com/',
       skills: ['React', 'rxjs', 'HTML5', 'CSS3'],

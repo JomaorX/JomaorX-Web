@@ -28,9 +28,8 @@
     padding: 5%;
     border-radius: 8px;
     text-align: center;
-    background:
-        linear-gradient(rgba(0, 93, 105, 0.512), rgba(0, 60, 70, 0.53)),
-        url("https://www.transparenttextures.com/patterns/starring.png");
+    background-color: #0b315a;
+        background-image: url("https://www.transparenttextures.com/patterns/escheresque.png");
     position: relative;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -140,8 +139,17 @@
 /* Skills Section */
 .container-4 h3,
 .container-3 h3 {
+    border-left: solid 4px #00d4ff77;
+    border-top: solid 4px #00d4ff77;
+    width: fit-content;
+    padding-left: 0.5rem;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
+}
+
+.container-3, .container-4 {
+    border-right: solid 4px #00d4ff33;
+    border-bottom: solid 4px #00d4ff33;
 }
 
 

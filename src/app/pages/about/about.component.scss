@@ -136,14 +136,10 @@ mat-card-actions {
 
 mat-card-actions a,
 mat-card-actions button {
-    background-color: #001E41;
     /* Color de fondo para los botones */
-    color: #ffffff;
     /* Color de texto para los botones */
-    border-radius: 8px;
     /* Bordes suaves para los botones */
     padding: 10px 20px;
-    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -151,7 +147,6 @@ mat-card-actions button {
 
 mat-card-actions a:hover,
 mat-card-actions button:hover {
-    background-color: #001e41a9;
     /* Un verde más oscuro al pasar el ratón */
     transform: translateY(-2px);
     /* Pequeño efecto de elevación */
