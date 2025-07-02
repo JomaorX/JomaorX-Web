@@ -1,12 +1,12 @@
 <div class="contact-wrapper">
-  <mat-card class="contact-card">
+  <mat-card class="contact-card card-relative">
     <mat-card-header>
       <mat-card-title>Contacto</mat-card-title>
       <mat-card-subtitle>¡Pongámonos en contacto!</mat-card-subtitle>
     </mat-card-header>
 
     <mat-card-content>
-      <form class="formContainer" #contactFormRef [formGroup]="contactForm"
+      <form class="formContainer position-relative" #formDirective="ngForm" #contactFormRef [formGroup]="contactForm"
       (ngSubmit)="onSubmit()">
 
         <mat-form-field appearance="outline">
@@ -30,7 +30,6 @@
           }
           <mat-icon matSuffix>alternate_email</mat-icon>
         </mat-form-field>
-
         <mat-form-field appearance="outline">
           <mat-label>Mensaje</mat-label>
           <textarea matInput rows="4" formControlName="message" name="message" placeholder="Escribe tu mensaje aquí"></textarea>
@@ -49,5 +48,11 @@
         </button>
       </form>
     </mat-card-content>
+    
+    @if (isLoading) {
+      <div class="spinner-card-overlay">
+        <mat-spinner diameter="50"></mat-spinner>
+      </div>
+    }
   </mat-card>
 </div>
