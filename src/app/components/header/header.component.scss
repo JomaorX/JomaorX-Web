@@ -62,11 +62,9 @@
     margin-left: 16px;
 }
 
-.my-name {
-    font-family: "Syne Mono", monospace;
-    font-weight: bolder;
-    color: #333;
-    font-size: 1.2rem;
+.my-name{
+    width: 64px;
+    vertical-align: middle;
 }
 
 /* Espaciador */
@@ -107,4 +105,9 @@
     /* Ocultar navegación desktop */
     .desktop-nav {
         display: none;
-    } }
+    } 
+
+    .my-name{
+        width: 44px;
+    }
+}
