@@ -51,10 +51,21 @@
         <mat-icon>public</mat-icon>
         Web
       </a>
-      <a matButton="outlined" href="{{ project.code }}" target="_blank">
-        <mat-icon>code</mat-icon>
-        Código
-      </a>
+      @if (typeof project.code === 'string') {
+
+        <a matButton="tonal" href="{{ project.code }}" target="_blank">
+          <mat-icon>code</mat-icon>
+          Código
+        </a>
+      } @else {
+        <a matButton="tonal" href="{{ project.code.front }}" target="_blank">
+          <mat-icon>code</mat-icon>
+          Código
+        </a><a matButton="tonal" href="{{ project.code.back }}" target="_blank">
+          <mat-icon>code</mat-icon>
+          Código
+        </a>
+      }
     </div>
   </section>
 </div>

@@ -31,10 +31,10 @@ export class ProjectService {
       title: 'ReserV',
       subtitle: 'Web de gestión de peluquerias y reservas para clientes.',
       photo: 'reserV.png',
-      code: [
-        'https://github.com/JomaorX/ReserV-front',
-        'https://github.com/JomaorX/ReserV-back',
-      ],
+      code: {
+        front: 'https://github.com/JomaorX/ReserV-front',
+        back: 'https://github.com/JomaorX/ReserV-back',
+      },
       link: '/construction',
       skills: [
         'AngularJS',
