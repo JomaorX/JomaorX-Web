@@ -4,34 +4,40 @@
       <mat-card appearance="outlined">
         <mat-card-header>
           <mat-card-title-group>
-            <mat-card-title>Sobre mi</mat-card-title>
-            <mat-card-subtitle>José Miguel Martínez Ortiz</mat-card-subtitle>
-            <img mat-card-lg-image src="yo.jpeg" />
+            <img mat-card-lg-image src="yo.jpeg" alt="José Miguel Martínez Ortiz" />
+            <div class="header-text-container">
+              <mat-card-title>Sobre mí</mat-card-title>
+              <mat-card-subtitle>José Miguel Martínez Ortiz</mat-card-subtitle>
+            </div>
           </mat-card-title-group>
         </mat-card-header>
         <mat-card-content>
           <p>
-            Soy desarrollador de Aplicaciones Web, apasionado por la
-            programación y el proceso creativo de desarrollo. Me encanta el
-            desafío de resolver problemas y crear soluciones visualmente
-            atractivas y funcionales.
+            Soy desarrollador de Aplicaciones Web, apasionado por la programación y
+            el proceso creativo de desarrollo. Me encanta el desafío de resolver
+            problemas y crear soluciones visualmente atractivas y funcionales.
           </p>
           <p>
-            Soy proactivo y apasionado por aprender. Con capacidad para
-            adaptarme y trabajar en equipo, me preparo para ser Full Stack Web
-            Developer.
+            Soy proactivo y apasionado por aprender. Con capacidad para adaptarme y
+            trabajar en equipo, me preparo para ser Full Stack Web Developer.
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <a matButton href="cv.pdf" download="José_Miguel_Martínez_WebDeveloper.pdf" target="_blank">
-            <mat-icon>download</mat-icon>CV
+          <a
+            mat-button
+            href="cv.pdf"
+            download="José_Miguel_Martínez_WebDeveloper.pdf"
+            target="_blank"
+          >
+            <mat-icon>download</mat-icon>Descargar CV
           </a>
-          <button matButton routerLink="/contact">
-            <mat-icon>perm_contact_calendar</mat-icon>CONTACTO
+          <button mat-button routerLink="/contact">
+            <mat-icon>perm_contact_calendar</mat-icon>Contacto
           </button>
         </mat-card-actions>
       </mat-card>
     </div>
+
 
     <mat-accordion>
       <mat-expansion-panel>
