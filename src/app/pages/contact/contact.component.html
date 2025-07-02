@@ -6,17 +6,9 @@
     </mat-card-header>
 
     <mat-card-content>
-      <form class="formContainer" [formGroup]="contactForm" 
-      action="https://formsubmit.co/martinez97.pro@gmail.com"
-      method="POST"
+      <form class="formContainer" #contactFormRef [formGroup]="contactForm"
       (ngSubmit)="onSubmit()">
-      
-        <!-- Añade estos campos ocultos -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portfolio">
 
-        <!-- Tus campos existentes (no los toco) -->
         <mat-form-field appearance="outline">
           <mat-label>Nombre</mat-label>
           <input matInput formControlName="name" name="name" placeholder="Tu nombre completo" />
