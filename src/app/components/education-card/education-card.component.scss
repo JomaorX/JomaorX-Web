@@ -68,21 +68,6 @@ mat-card-content p {
     line-height: 1.5;
 }
 
-mat-chip-set {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-mat-chip {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .education-card {
@@ -125,9 +110,5 @@ mat-chip {
 
     .right-block {
         padding-left: 0;
-    }
-
-    mat-chip {
-        font-size: 0.7rem;
     }
 }

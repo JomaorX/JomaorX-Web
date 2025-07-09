@@ -93,11 +93,11 @@
 
   <section class="container-4">
     <h3>Herramientas utilizadas</h3>
-    <mat-chip-set class="skills-chipset">
+    <mat-chip-set>
       @for (skill of project.skills; track $index) {
-      <mat-chip class="skill-chip">
+      <mat-chip>
         <i
-          class="devicon-{{ skill.toLowerCase() }}-plain colored skill-icon"
+          class="devicon-{{ skill.toLowerCase() }}-plain colored"
         ></i>
         {{ skill }}
       </mat-chip>

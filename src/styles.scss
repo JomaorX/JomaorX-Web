@@ -29,15 +29,19 @@ body {
      }
 }
 
-mat-chip i {
-  font-size: 1.2rem;
-  vertical-align: middle;
-  margin-right: 0.3rem;
-}
 
-/* Opcional: ajustar el padding del chip para mejor espaciado */
-mat-chip {
-  padding: 0.3rem 0.6rem;
+/* Skills Section */
+mat-chip-set {
+
+  mat-chip {
+    padding: 0.2rem 0.2rem;
+    background: #fff !important;
+    
+    i {
+      vertical-align: middle;
+      font-size: 1.5rem;
+    }
+  }
 }
 
 @media (max-width: 768px){
