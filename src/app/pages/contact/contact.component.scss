@@ -5,7 +5,16 @@
     padding: 2rem;
 }
 
+mat-card-title{
+    color: var(--c-ti-col-card);
+}
+
+mat-card-subtitle{
+color: var(--c-sub-col-card);
+}
+
 .contact-card {
+    background-color: var(--c-bg-card);
     width: 100%;
     max-width: 600px;
 }

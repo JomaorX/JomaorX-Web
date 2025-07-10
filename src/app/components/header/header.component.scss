@@ -5,21 +5,20 @@
     margin: 0;
 }
 
-/* Contenedor del sidenav */
-
-
 /* Menú móvil (oculto por defecto) */
 .mobile-menu {
     padding: 18px;
     width: 70%;
     display: none;
     height: fit-content;
+    background-color: var(--header-bg);
+
     a,
     mat-icon,
     span {
         vertical-align: middle;
+        color: var(--header-text);
     }
-
 }
 
 .mobile-link {
@@ -27,13 +26,14 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* Asegura el icono a la izquierda */
     height: 48px;
-    /* o el alto de tu item */
+    background-color: var(--mobile-link-bg);
+    /* Nuevo: fondo para enlaces móviles */
 
     mat-icon {
         margin-right: 16px;
         z-index: 1;
+        color: var(--header-icon);
     }
 
     span {
@@ -42,7 +42,15 @@
         transform: translateX(-50%);
         font-weight: 500;
         pointer-events: none;
-        /* Evita interferencias con el click */
+    }
+
+    &:hover {
+        background-color: var(--mobile-link-hover-bg);
+
+        /* Nuevo: hover para móvil */
+        span {
+            color: var(--header-link-hover);
+        }
     }
 }
 
@@ -53,6 +61,8 @@
     z-index: 1000;
     display: flex;
     align-items: center;
+    background-color: var(--header-bg);
+    color: var(--header-text);
 }
 
 /* Logo */
@@ -62,7 +72,7 @@
     margin-left: 16px;
 }
 
-.my-name{
+.my-name {
     width: 64px;
     vertical-align: middle;
 }
@@ -82,18 +92,23 @@
         display: flex;
         align-items: center;
         gap: 4px;
+        color: var(--header-text);
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: var(--header-link-hover);
+        }
     }
 }
 
-/* Botón menú móvil (oculto por defecto) */
+/* Botón menú móvil */
 .mobile-menu-button {
     display: none;
+    color: var(--header-icon);
 }
 
 /* Media queries para responsive */
 @media (max-width: 768px) {
-
-    /* Mostrar menú móvil y su botón */
     .mobile-menu {
         display: block;
     }
@@ -102,12 +117,11 @@
         display: inline-flex;
     }
 
-    /* Ocultar navegación desktop */
     .desktop-nav {
         display: none;
-    } 
+    }
 
-    .my-name{
+    .my-name {
         width: 44px;
     }
 }

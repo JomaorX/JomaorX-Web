@@ -53,6 +53,11 @@
           <span>Contacto</span>
         </a>
       </nav>
+      <button mat-icon-button (click)="themeService.toggleTheme()">
+        <mat-icon class="icon-header">
+          {{ themeService.isDarkTheme() ? 'light_mode' : 'dark_mode' }}
+        </mat-icon>
+      </button>
     </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>

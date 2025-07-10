@@ -20,7 +20,7 @@
     </mat-card-content>
   
     <mat-card-footer>
-      <mat-chip-set color="primary" selected>
+      <mat-chip-set>
         @for (tag of data.tags; track $index) {
             <mat-chip>
               <i class="devicon-{{ tag.toLowerCase() }}-plain colored"></i>

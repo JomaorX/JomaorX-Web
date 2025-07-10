@@ -8,35 +8,37 @@
 
   @include mat.expansion-overrides((container-background-color: #f0f2f4,
       header-text-color: #001e41,
-      header-indicator-color: #2f6db4,
+      header-indicator-color: #001e41,
       header-hover-state-layer-color: rgba(47, 109, 180, 0.05),
       header-focus-state-layer-color: rgba(47, 109, 180, 0.1),
       actions-divider-color: #ccddee));
+
+  --s-bg: #409ba5d5;
+  --s-bgi: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
 }
 
 html,
 body {
   body {
-      font-family: "Montserrat", "Helvetica Neue", sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      position: relative;
-      background-color: #409ba5d5;
-      background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
-      background-repeat: repeat;
-      background-attachment: fixed;
-     }
+    font-family: "Montserrat", "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    background-color: var(--s-bg);
+    background-image: var(--s-bgi);
+    background-repeat: repeat;
+    background-attachment: fixed;
+  }
 }
 
 
 /* Skills Section */
 mat-chip-set {
-
   mat-chip {
     padding: 0.2rem 0.2rem;
-    background: #fff !important;
-    
+    background: var(--mc-bg) !important;
+
     i {
       vertical-align: middle;
       font-size: 1.5rem;
@@ -44,7 +46,154 @@ mat-chip-set {
   }
 }
 
-@media (max-width: 768px){
+.icon-header {
+  color: #669;
+
+  .dark-theme & {
+    color: #f90;
+  }
+}
+
+:root {
+  /* Colores del footer (light theme) */
+  --footer-bg: #2c3e50;
+  --footer-text: #ecf0f1;
+  --footer-link: #bdc3c7;
+  --footer-link-hover: #3498db;
+  --footer-social-icon: brightness(0) invert(1);
+
+  /* Espaciados y tamaños */
+  --footer-padding: 2rem 1rem;
+  --footer-social-gap: 1.5rem;
+  --footer-icon-size: 32px;
+  --footer-icon-hover: translateY(-3px);
+
+  /* Colores del header (light theme) */
+  --header-bg: #ffffff;
+  /* Fondo por defecto (ajusta según tu tema) */
+  --header-text: #000000;
+  /* Color de texto por defecto */
+  --header-icon: #000000;
+  /* Color de íconos */
+  --header-link-hover: #3f51b5;
+  /* Color hover para links (azul Material) */
+  /* Nuevas variables para móvil */
+  --mobile-link-bg: transparent;
+  --mobile-link-hover-bg: rgba(0, 0, 0, 0.04);
+
+  //home
+  --h-bg: #1b518a;
+  --h-bgi: url("https://www.transparenttextures.com/patterns/escheresque.png");
+  --h-h2: #CDD5EB;
+  --h-p: #222;
+  --icon-filter: brightness(0) invert(1);
+
+  //about 
+  --ac-bg: #fff2;
+
+  //education
+  --e-title: #001e41;
+  --e-date: #555;
+  --mc-bg: #ffffff;
+  --mc-c: #333;
+  --e-cbg: #E7EDF4;
+
+  //project card
+
+  --p-sub-col: #2d2d2d;
+  --p-but-col: #fff;
+  --p-bg-card: #fff3;
+  --p-ti-bg-card: #3f51b5;
+
+  //contact 
+  --c-ti-col-card: #333;
+  --c-sub-col-card: #3B6D8A;
+  --c-bg-card: #eee;
+
+  //project-detail
+  --pd-col-h: #001E41;
+  --pd-col: #377248;
+  --pd-col-u: #333;
+
+}
+
+.dark-theme {
+  //about
+  @include mat.expansion-overrides((container-background-color: #222d,
+      header-text-color: #CDD5EB,
+      header-indicator-color: #CDD5EB));
+
+  //chips
+  @include mat.chips-overrides((label-text-color: #ddd));
+
+  //form
+  @include mat.form-field-overrides((outlined-outline-color:#aaa,
+      outlined-label-text-color: #aaa,
+      outlined-input-text-placeholder-color: #aaa,
+      outlined-input-text-color: #aaa,
+      outlined-hover-label-text-color: #fff,
+      outlined-hover-outline-color: #fff,
+    ));
+
+  //todo
+  --s-bg: #07e6ffd5;
+  --s-bgi: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+
+  /* Ajustes para dark theme (modifica según prefieras) */
+  --footer-bg: #1a252f;
+  /* Un tono más oscuro */
+  --footer-text: #f8f9fa;
+  /* Blanco más puro */
+  --footer-link: #95a5a6;
+  /* Gris más claro */
+  --footer-link-hover: #5dade2;
+  /* Azul más suave */
+  /* --footer-social-icon puede mantenerse igual */
+
+  --header-bg: #232323;
+  --header-text: #ffffff;
+  --header-icon: #ffffff;
+  --header-link-hover: #8c9eff;
+  /* Ajustes para dark mode */
+  --mobile-link-hover-bg: rgba(255, 255, 255, 0.08);
+
+  //home
+  --h-bg: #007bffab;
+  --h-bgi: url("https://www.transparenttextures.com/patterns/escheresque-dark.png");
+  --h-h2: #CDD5EB;
+  --h-p: #eee;
+
+  //about 
+  --ac-bg: #0042;
+
+  // education
+  --e-title: #CDD5EB;
+  --e-date: #eee;
+  --mc-bg: #fff2;
+  --mc-c: #eee;
+  --e-cbg: #fff2;
+
+  //project card
+  --p-sub-col: #ccc;
+  --p-but-col: #000;
+  --p-bg-card: #0003;
+  --p-ti-bg-card: #91a1ff;
+
+  //contact
+  --c-ti-col-card: #fff;
+  --c-sub-col-card: #76cdff;
+  --c-bg-card: #333;
+
+  //project-detail
+  --pd-col-h: #a8b7f1;
+  --pd-col: #57d179;
+  --pd-col-u: #eee;
+}
+
+
+
+@media (max-width: 768px) {
   mat-chip {
-      padding: 0; }
+    padding: 0;
+  }
 }
