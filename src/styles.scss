@@ -13,8 +13,6 @@
       header-focus-state-layer-color: rgba(47, 109, 180, 0.1),
       actions-divider-color: #ccddee));
 
-
-
   --s-bg: #409ba5d5;
   --s-bgi: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
 }
@@ -45,6 +43,14 @@ mat-chip-set {
       vertical-align: middle;
       font-size: 1.5rem;
     }
+  }
+}
+
+.icon-header {
+  color: #669;
+
+  .dark-theme & {
+    color: #f90;
   }
 }
 
