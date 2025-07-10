@@ -23,8 +23,8 @@
 /* Card Styling */
 mat-card {
     border: none;
-    background-color: #0b315a;
-    background-image: url("https://www.transparenttextures.com/patterns/escheresque.png");
+    background-color: var(--h-bg);
+    background-image: var(--h-bgi);
     color: #fff;
     /* Color de texto para que contraste con el fondo oscuro */
     text-align: center;
@@ -99,7 +99,7 @@ mat-card-subtitle {
 
 /* Content Styling */
 mat-card-content {
-    background-color: #0042;
+    background-color: var(--ac-bg);
     width: fit-content;
     margin: 0 auto;
     padding: 10px 10px;
@@ -107,7 +107,7 @@ mat-card-content {
     /* Espaciado vertical para el contenido */
     line-height: 1.6;
     /* Mejor legibilidad */
-    color: #f0f0f0;
+    color: var(--h-p);
     /* Color de texto para el contenido */
     text-align: center;
     /* Centrar el texto en general */

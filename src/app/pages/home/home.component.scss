@@ -6,8 +6,8 @@
     flex-direction: column;
     align-items: center;
     padding: 3rem;
-    background-color: #0b315a;
-    background-image: url("https://www.transparenttextures.com/patterns/escheresque.png");
+    background-color: var(--h-bg);
+    background-image: var(--h-bgi);
     text-align: center;
 }
 
@@ -27,7 +27,7 @@
 
 .info-container {
     h2 {
-        color: #CDD5EB;
+        color: var(--h-h2);
         font-size: 2.5rem;
         margin: 0;
     }
@@ -35,7 +35,7 @@
     p {
         font-weight: 600;
         font-style: italic;
-        color: #eee;
+        color: var(--h-p) !important;
         margin-top: 1rem;
     }
 }
@@ -47,7 +47,7 @@
 
     img {
         width: 32px;
-        filter: brightness(0) invert(1);
+        filter: var(--icon-filter);
         transition: transform 0.2s ease;
         &:hover {
             transform: scale(1.2);

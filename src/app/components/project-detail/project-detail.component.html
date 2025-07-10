@@ -11,7 +11,7 @@
 </div>
 } @else {
 <div class="main-container">
-  <section class="container-1">
+  <section class="con container-1">
     <div class="header-content">
       <h1>{{ project.title }}</h1>
       <span class="project-status" [class]="'status-' + project.status">
@@ -37,7 +37,7 @@
     </a>
   </section>
 
-  <section class="container-2">
+  <section class="con container-2">
     <div class="laptop-container">
       <img src="pantalla.png" alt="Laptop" class="laptop-image" />
       <div class="laptop-screen">
@@ -50,7 +50,7 @@
   </section>
 
   <!-- Actualiza la sección de descripción para mejor formato -->
-  <section class="container-3">
+  <section class="con container-3">
     <h3>Descripción</h3>
     <div class="description-content">
       <!-- Usa <pre> para mantener saltos de línea -->
@@ -67,7 +67,7 @@
   </section>
 
   <!-- Mejora la sección de aprendizajes -->
-  <section class="container-learnings">
+  <section class="con container-learnings">
     <h3>Aprendizajes</h3>
     <ul class="learnings-list">
       @for (learning of project.learnings; track $index) {
@@ -79,7 +79,7 @@
     </ul>
   </section>
 
-  <section class="container-features">
+  <section class="con container-features">
     <h3>Funcionalidades clave</h3>
     <ul class="features-list">
       @for (feature of project.features; track $index) {
@@ -91,7 +91,7 @@
     </ul>
   </section>
 
-  <section class="container-4">
+  <section class="con container-4">
     <h3>Herramientas utilizadas</h3>
     <mat-chip-set>
       @for (skill of project.skills; track $index) {
@@ -105,7 +105,7 @@
     </mat-chip-set>
   </section>
 
-  <section class="container-4 links-section">
+  <section class="con container-4 links-section">
     <h3>Enlaces</h3>
     <div class="buttons-container">
       <a matFab extended href="{{ project.link }}" target="_blank">

@@ -39,8 +39,8 @@
     padding: 2.5rem;
     border-radius: 8px;
     text-align: center;
-    background-color: #0b315a;
-    background-image: url("https://www.transparenttextures.com/patterns/escheresque.png");
+    background-color: var(--h-bg);
+    background-image: var(--h-bgi);
     position: relative;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -389,6 +389,16 @@
         .learning-icon {
             color: #00d4ff;
         }
+    }
+}
+
+.con {
+    h3 {
+        color: var(--pd-col-h);
+    }
+        color: var(--pd-col);
+    ul {
+        color: var(--pd-col-u);
     }
 }
 

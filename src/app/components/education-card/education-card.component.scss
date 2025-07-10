@@ -3,7 +3,7 @@
     max-width: 800px;
     width: 90%;
     border-radius: 8px;
-    background-color: #E7EDF4;
+    background-color: var(--e-cbg);
     transition: all 0.3s ease;
 }
 
@@ -28,7 +28,7 @@ mat-card {
 }
 
 .title {
-    color: #001e41;
+    color: var(--e-title);
     font-size: clamp(1.1rem, 2vw, 1.3rem);
     line-height: 1.3;
 }
@@ -58,7 +58,7 @@ mat-card {
 .right-block {
     text-align: right;
     font-size: 1rem;
-    color: #555;
+    color: var(--e-date);
     min-width: 120px;
 }
 

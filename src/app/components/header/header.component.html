@@ -52,12 +52,12 @@
           <mat-icon>mail</mat-icon>
           <span>Contacto</span>
         </a>
-        <button mat-icon-button (click)="themeService.toggleTheme()">
-          <mat-icon>
-            {{ themeService.isDarkTheme() ? 'light_mode' : 'dark_mode' }}
-          </mat-icon>
-        </button>
       </nav>
+      <button mat-icon-button (click)="themeService.toggleTheme()">
+        <mat-icon>
+          {{ themeService.isDarkTheme() ? 'light_mode' : 'dark_mode' }}
+        </mat-icon>
+      </button>
     </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>
