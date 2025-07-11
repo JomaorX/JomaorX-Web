@@ -82,14 +82,15 @@ mat-chip-set {
   --mobile-link-hover-bg: rgba(0, 0, 0, 0.04);
 
   //home
-  --h-bg: #1b518a;
+  --h-bg: #405A76;
   --h-bgi: url("https://www.transparenttextures.com/patterns/escheresque.png");
   --h-h2: #CDD5EB;
-  --h-p: #222;
+  --h-p: #fff;
   --icon-filter: brightness(0) invert(1);
 
   //about 
   --ac-bg: #fff2;
+  --a-p: #222;
 
   //education
   --e-title: #001e41;
@@ -165,11 +166,12 @@ mat-chip-set {
 
   //about 
   --ac-bg: #0042;
+  --a-p: #eee;
 
   // education
   --e-title: #CDD5EB;
   --e-date: #eee;
-  --mc-bg: #fff2;
+  --mc-bg: #0009;
   --mc-c: #eee;
   --e-cbg: #fff2;
 

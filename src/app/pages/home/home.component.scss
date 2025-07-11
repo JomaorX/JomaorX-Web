@@ -63,14 +63,15 @@ mat-button {
 /* Responsive */
 @media (max-width: 768px) {
     .second-container {
-
+        margin: 0;
         .info-container {
             h2 {
                 font-size: 2rem;
             }
 
             p {
-                font-size: 0.8rem;
+                margin: 0;
+                font-size: 0.9rem;
                 font-weight: 600;
                 font-style: italic;
                 color: #eee;

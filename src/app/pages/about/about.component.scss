@@ -25,9 +25,6 @@ mat-card {
     border: none;
     background-color: var(--h-bg);
     background-image: var(--h-bgi);
-    color: #fff;
-    /* Color de texto para que contraste con el fondo oscuro */
-    text-align: center;
     border-radius: 12px;
     /* Bordes más suaves para un look moderno */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -107,7 +104,7 @@ mat-card-content {
     /* Espaciado vertical para el contenido */
     line-height: 1.6;
     /* Mejor legibilidad */
-    color: var(--h-p);
+    color: var(--a-p);
     /* Color de texto para el contenido */
     text-align: center;
     /* Centrar el texto en general */
@@ -136,25 +133,19 @@ mat-card-actions {
 
 mat-card-actions a,
 mat-card-actions button {
-    /* Color de fondo para los botones */
-    /* Color de texto para los botones */
-    /* Bordes suaves para los botones */
     padding: 10px 20px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 mat-card-actions a:hover,
 mat-card-actions button:hover {
-    /* Un verde más oscuro al pasar el ratón */
     transform: translateY(-2px);
     /* Pequeño efecto de elevación */
 }
 
 mat-icon {
     margin-right: 8px;
-    /* Espacio entre el icono y el texto del botón */
 }
 
 /* Responsive adjustments */
