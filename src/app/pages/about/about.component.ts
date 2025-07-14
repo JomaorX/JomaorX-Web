@@ -63,7 +63,7 @@ export class AboutComponent {
       subtitle: '',
       institution: 'Antonio Martín León',
       location: 'OpenWebinars',
-      period: '4 Horas',
+      period: '5 Horas',
       image: 'laravel.png',
       icon: 'location_on',
       tags: ['Php', 'Laravel', 'Eloquent'],
