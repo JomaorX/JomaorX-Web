@@ -59,7 +59,17 @@ export class AboutComponent {
 
   otros: Education[] = [
     {
-      title: 'Angular - Curso Completo',
+      title: 'Laravel',
+      subtitle: '',
+      institution: 'Antonio Martín León',
+      location: 'OpenWebinars',
+      period: '4 Horas',
+      image: 'laravel.png',
+      icon: 'location_on',
+      tags: ['Php', 'Laravel', 'Eloquent'],
+    },
+    {
+      title: 'Angular',
       subtitle: '',
       institution: 'Manuel Agudo',
       location: 'Youtube',
@@ -79,7 +89,7 @@ export class AboutComponent {
       tags: ['React'],
     },
     {
-      title: 'Curso de Javascript - Nivel JUNIOR',
+      title: 'Javascript - Nivel JUNIOR',
       subtitle: '',
       institution: 'Soy Dalto',
       location: 'Youtube',
@@ -89,7 +99,7 @@ export class AboutComponent {
       tags: ['Javascript'],
     },
     {
-      title: 'Curso de Javascript - Nivel MID',
+      title: 'Javascript - Nivel MID',
       subtitle: '',
       institution: 'Soy Dalto',
       location: 'Youtube',
@@ -99,7 +109,7 @@ export class AboutComponent {
       tags: ['Javascript'],
     },
     {
-      title: 'Curso de Javascript - Nivel MASTER',
+      title: 'Javascript - Nivel MASTER',
       subtitle: '',
       institution: 'Soy Dalto',
       location: 'Youtube',
@@ -109,7 +119,7 @@ export class AboutComponent {
       tags: ['Javascript'],
     },
     {
-      title: 'Curso de Python',
+      title: 'Python',
       subtitle: '',
       institution: 'Soy Dalto',
       location: 'Youtube',
@@ -129,7 +139,7 @@ export class AboutComponent {
       tags: ['GIT', 'GITHUB'],
     },
     {
-      title: 'Curso de HTML y CSS Completo',
+      title: 'HTML y CSS Completo',
       subtitle: '',
       institution: 'Soy Dalto',
       location: 'Youtube',
@@ -139,14 +149,14 @@ export class AboutComponent {
       tags: ['HTML5', 'CSS3'],
     },
     {
-      title: 'Aprende ingles desde cero',
+      title: 'Inglés',
       subtitle: '',
       institution: 'Sr Richard',
       location: 'Udemy',
       period: '25 Horas',
       image: 'ingles.png',
       icon: 'location_on',
-      tags: ['Ingles'],
+      tags: ['Inglés'],
     },
   ];
 }
