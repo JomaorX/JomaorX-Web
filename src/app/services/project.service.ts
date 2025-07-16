@@ -7,6 +7,46 @@ import { Project } from '../models/Project';
 export class ProjectService {
   private projects: Project[] = [
     {
+      id: 0,
+      status: 'development',
+      title: 'Sharecipes',
+      subtitle: 'Plataforma web para compartir recetas de cocina',
+      photo: 'construction.png',
+      description:
+        'Sharecipes permite a los usuarios descubrir, subir, guardar y explorar recetas de forma sencilla e intuitiva.',
+      things: [
+        'Búsqueda avanzada con filtros por categoría e ingredientes',
+        'Subida de recetas con pasos, fotos e ingredientes',
+        'Favoritos y gestión de recetas personales',
+      ],
+      learnings: [
+        'Construcción de API REST con Laravel y React',
+        'Gestión de base de datos MySQL con Eloquent ORM',
+        'Autenticación y seguridad con JWT',
+      ],
+      code: {
+        front: '#',
+        back: 'https://github.com/JomaorX/Sharecipes',
+      },
+      link: '#',
+      skills: [
+        'Laravel',
+        'PHP',
+        'React',
+        'MySQL',
+        'JWT',
+        'HTML5',
+        'CSS3',
+        'Eloquent',
+        'REST API',
+      ],
+      features: [
+        'Interfaz amigable y responsive',
+        'Autenticación y perfiles de usuario',
+        'Sistema de favoritos',
+      ],
+    },
+    {
       id: 1,
       status: 'development',
       title: 'ReserV',
