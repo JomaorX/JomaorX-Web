@@ -25,10 +25,10 @@ export class ProjectService {
         'Autenticación y seguridad con JWT',
       ],
       code: {
-        front: '#',
+        front: '.',
         back: 'https://github.com/JomaorX/Sharecipes',
       },
-      link: '#',
+      link: '.',
       skills: [
         'Laravel',
         'PHP',
