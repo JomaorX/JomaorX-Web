@@ -20,13 +20,14 @@ export class ProjectService {
         'Favoritos y gestión de recetas personales',
       ],
       learnings: [
+        'Autenticación con Sanctum',
         'Construcción de API REST con Laravel y React',
         'Gestión de base de datos MySQL con Eloquent ORM',
-        'Autenticación y seguridad con JWT',
+        'Rutas organizadas entre públicas y privadas',
       ],
       code: {
-        front: '.',
-        back: 'https://github.com/JomaorX/Sharecipes',
+        front: 'https://github.com/JomaorX/Sharecipes-Front',
+        back: 'https://github.com/JomaorX/Sharecipes-Back',
       },
       link: '.',
       skills: [
