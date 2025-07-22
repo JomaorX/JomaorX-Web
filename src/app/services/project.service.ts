@@ -33,9 +33,9 @@ export class ProjectService {
       skills: [
         'Laravel',
         'PHP',
+        'Sanctum',
         'React',
         'MySQL',
-        'JWT',
         'HTML5',
         'CSS3',
         'Eloquent',
