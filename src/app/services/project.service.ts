@@ -11,7 +11,7 @@ export class ProjectService {
       status: 'development',
       title: 'Sharecipes',
       subtitle: 'Plataforma web para compartir recetas de cocina',
-      photo: 'construction.png',
+      photo: 'sharecipes.png',
       description:
         'Sharecipes permite a los usuarios descubrir, subir, guardar y explorar recetas de forma sencilla e intuitiva.',
       things: [
@@ -29,7 +29,7 @@ export class ProjectService {
         front: 'https://github.com/JomaorX/Sharecipes-Front',
         back: 'https://github.com/JomaorX/Sharecipes-Back',
       },
-      link: '.',
+      link: 'https://sharecipes.onrender.com',
       skills: [
         'Laravel',
         'PHP',
