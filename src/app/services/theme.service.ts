@@ -18,10 +18,7 @@ export class ThemeService {
 
   constructor() {
     const savedTheme = localStorage.getItem('darkTheme');
-    const prefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
-    this.darkTheme = savedTheme ? JSON.parse(savedTheme) : prefersDark;
+    this.darkTheme = savedTheme ? JSON.parse(savedTheme) : false;
     document.body.classList.toggle('dark-theme', this.darkTheme);
   }
 }
