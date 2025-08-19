@@ -95,7 +95,7 @@ export class ProjectService {
       status: 'live',
       title: 'ChatFlow',
       subtitle: 'Plataforma de mensajería instantánea en tiempo real',
-      photo: 'chatFlow.png',
+      photo: 'chat.png',
       description: 'Aplicación de chat con las siguientes características:',
       things: [
         'Autenticación segura de usuarios',
@@ -185,64 +185,6 @@ export class ProjectService {
         'Noticias filtrables por categoría',
         'Calendario con resultados por GP',
         'Interfaz responsive tipo dashboard',
-      ],
-    },
-    {
-      id: 5,
-      status: 'archived',
-      title: 'ScraperX',
-      subtitle: 'Scraper de productos con renderizado dinámico',
-      photo: 'scraperX.png',
-      description:
-        'Aplicación para extraer productos de tiendas online (título, imagen, precio) usando Scraper API.',
-      things: [
-        'Formulario para introducir URL de la tienda',
-        'Scraping de datos configurable por selectores',
-        'Listado visual de productos extraídos',
-        'Botón de compra y sistema de carrito en frontend',
-      ],
-      learnings: [
-        'Uso de Scraper API para evitar bloqueos por CORS',
-        'Parsers de HTML con Cheerio y Node.js',
-        'Manejo de estado del carrito con JavaScript',
-      ],
-      code: 'https://github.com/JomaorX/ScraperX',
-      link: 'https://scraperx-jifh.onrender.com/',
-      skills: ['JavaScript', 'Node.js', 'Cheerio', 'HTML5', 'CSS3'],
-      features: [
-        'Scraping personalizable por selector',
-        'Renderizado dinámico de productos',
-        'Sistema de carrito visual en frontend',
-        'Interfaz sencilla y responsive',
-      ],
-    },
-    {
-      id: 6,
-      status: 'archived',
-      title: 'Bakrery',
-      subtitle: 'Sitio web informativo para una pastelería artesanal',
-      photo: 'bakrery.png',
-      description:
-        'Landing page para promocionar productos de repostería artesanal, con diseño cálido y moderno.',
-      things: [
-        'Galería de productos con descripciones',
-        'Sección de contacto y localización',
-        'Diseño responsive para móviles',
-        'Animaciones suaves y tipografía amigable',
-      ],
-      learnings: [
-        'Diseño UI con React y CSS modular',
-        'Gestión de estados simples con React',
-        'Optimización de imágenes y carga rápida',
-      ],
-      code: 'https://github.com/JomaorX/Bakery',
-      link: 'https://bakery-m4by.onrender.com/',
-      skills: ['React', 'JavaScript', 'HTML5', 'CSS3'],
-      features: [
-        'Catálogo de productos con galería',
-        'Formulario de contacto funcional',
-        'Diseño estético y animaciones suaves',
-        'Adaptabilidad a todo tipo de pantallas',
       ],
     },
   ];
