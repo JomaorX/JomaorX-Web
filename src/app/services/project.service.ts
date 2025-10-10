@@ -101,7 +101,6 @@ export class ProjectService {
         'Autenticación segura de usuarios',
         'Mensajería en tiempo real con WebSockets',
         'Historial de conversaciones persistente',
-        'Notificaciones instantáneas',
       ],
       learnings: [
         'Implementación de Socket.IO para comunicación en tiempo real',

@@ -47,7 +47,7 @@ export class AboutComponent {
         'Soporte técnico',
         'Seguridad informática',
         'Redes',
-        'Administración de sistemas',
+        'Administración Typescriptde sistemas',
         'Ofimática',
         'Montaje y reparación',
         'HTML5',
