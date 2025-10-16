@@ -41,6 +41,7 @@ export class ProjectService {
         'Eloquent',
         'REST API',
       ],
+      mainsKills: ['Laravel', 'React', 'MySQL', 'Sanctum'],
       features: [
         'Interfaz amigable y responsive',
         'Autenticación y perfiles de usuario',
@@ -83,6 +84,7 @@ export class ProjectService {
         'HTML5',
         'CSS3',
       ],
+      mainsKills: ['AngularJS', 'NodeJS', 'Express', 'MySQL'],
       features: [
         'Calendario interactivo',
         'Perfiles de clientes',
@@ -118,6 +120,7 @@ export class ProjectService {
         'HTML5',
         'CSS3',
       ],
+      mainsKills: ['NodeJS', 'Socket.IO', 'MongoDB', 'JWT'],
       features: [
         'Interfaz de usuario intuitiva',
         'Encriptación de mensajes',
@@ -146,6 +149,7 @@ export class ProjectService {
       code: 'https://github.com/JomaorX/PokeData',
       link: 'https://pokedata-28w9.onrender.com',
       skills: ['JavaScript', 'HTML5', 'CSS3', 'API REST', 'Responsive Design'],
+      mainsKills: ['JavaScript', 'API REST', 'CSS3'],
       features: [
         'Búsqueda en tiempo real de Pokémon',
         'Visualización completa de stats y evoluciones',
@@ -155,7 +159,6 @@ export class ProjectService {
         'Animaciones CSS personalizadas',
       ],
     },
-
     {
       id: 4,
       status: 'live',
@@ -178,7 +181,8 @@ export class ProjectService {
       ],
       code: 'https://github.com/JomaorX/F1FAN',
       link: 'https://f1fan.onrender.com/',
-      skills: ['Angular', 'TypeScript', 'HTML5', 'CSS3', 'Angular Material'],
+      skills: ['AngularJS', 'TypeScript', 'HTML5', 'CSS3', 'Angular Material'],
+      mainsKills: ['AngularJS', 'TypeScript', 'Angular Material'],
       features: [
         'Listado de pilotos y equipos actualizado',
         'Noticias filtrables por categoría',

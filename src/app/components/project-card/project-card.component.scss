@@ -1,28 +1,25 @@
 /* Contenedor principal: divide en 2 columnas */
 .item-container {
+    background-color: var(--p-bg-card2);
+    border: 3px solid var(--p-ti-bg-card);
     display: grid;
     grid-template-columns: 3fr 1.5fr;
-    /* Mitad para laptop, mitad para info */
     align-items: center;
-    /* Centra verticalmente ambos lados */
     gap: 40px;
-    /* Espacio entre laptop e info */
     max-width: 1200px;
-    /* Ancho máximo del contenedor */
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Laptop (ajusta el ancho según necesites) */
+/* Laptop */
 .laptop-container {
     position: relative;
     width: 100%;
-    /* Ocupa todo el espacio de su columna */
     max-width: 700px;
-    /* Máximo ancho de la laptop */
 }
 
-/* Estilos de la pantalla del portátil (ya los tienes bien) */
 .laptop-image {
     width: 100%;
     display: block;
@@ -35,6 +32,7 @@
     width: 70.7%;
     height: 73.6%;
     overflow: hidden;
+    border-radius: 4px;
 }
 
 .laptop-screen img {
@@ -43,54 +41,94 @@
     object-fit: cover;
 }
 
-/* Info del proyecto (derecha) */
+/* Info del proyecto */
 .info-item {
-    text-align: left;
-    /* Alineación izquierda para títulos */
-    padding: 20px;
-    box-shadow: 2px 2px 5px var(--p-bg-card);
-    background-color: var(--p-bg-card);
-    border-radius: 8px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Título y subtítulo */
 .title-item {
+    text-align: center;
     color: var(--p-ti-bg-card);
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
 .subtitle-item {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--p-sub-col);
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* Botón (ajusta según tu tema de Angular Material) */
+/* Chips */
+.chip-center {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 15px;
+    max-width: 320px;
+}
+
+.chip-center mat-chip {
+    background: var(--mc-bg) !important;
+    border-radius: 16px;
+    font-weight: 500;
+    padding: 0.3rem 0.6rem;
+
+    i {
+        vertical-align: middle;
+        font-size: 1.4rem;
+        margin-right: 4px;
+    }
+}
+
+/* Botón */
 a[matButton] {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     padding: 10px 20px;
     background: var(--p-ti-bg-card);
     color: var(--p-but-col);
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+
+    mat-icon {
+        font-size: 1.2rem;
+    }
 }
 
-/* Responsive: en móvil apila en una columna */
+/* Responsive */
 @media (max-width: 768px) {
     .item-container {
         grid-template-columns: 1fr;
+        padding: 20px 10px;
     }
 
     .info-item {
         text-align: center;
-        padding: 20px 0;
+        padding: 20px 10px;
     }
 
     .title-item {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .subtitle-item {
         font-size: 1rem;
     }
 
+    .chip-center {
+        justify-content: center;
+        max-width: 100%;
+    }
 }

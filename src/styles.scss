@@ -99,11 +99,16 @@ mat-chip-set {
   --mc-c: #333;
   --e-cbg: #E7EDF4;
 
-  //project card
+  //project
+  --p-col-tit: #000;
+  --p-bor-tit: #fff;
+  --p-bg-tit: #fff6;
 
+  //project card
   --p-sub-col: #2d2d2d;
   --p-but-col: #fff;
   --p-bg-card: #fff3;
+  --p-bg-card2: #fffa;
   --p-ti-bg-card: #3f51b5;
 
   //contact 
@@ -175,10 +180,17 @@ mat-chip-set {
   --mc-c: #eee;
   --e-cbg: #fff2;
 
+  //project
+  --p-col-tit: #fff;
+  --p-bor-tit: #000;
+  --p-bg-tit: #0006;
+
+  
   //project card
   --p-sub-col: #ccc;
   --p-but-col: #000;
   --p-bg-card: #0003;
+  --p-bg-card2: #000a;
   --p-ti-bg-card: #91a1ff;
 
   //contact

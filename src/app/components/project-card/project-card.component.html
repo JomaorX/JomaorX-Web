@@ -1,23 +1,25 @@
 <div class="item-container">
-    <div class="laptop-container">
-        <img src="pantalla.png" alt="Laptop" class="laptop-image">
-        <div class="laptop-screen">
-          <img [src]="data.photo" alt="foto del proyecto {{data.title}}">
-        </div>
-      </div>
-      <div class="info-item">
-        <mat-chip-set>
-      @for (skill of data.skills; track $index) {
+  <div class="laptop-container">
+    <img src="pantalla.png" alt="Laptop" class="laptop-image" />
+    <div class="laptop-screen">
+      <img [src]="data.photo" alt="foto del proyecto {{ data.title }}" />
+    </div>
+  </div>
+
+  <div class="info-item">
+    <h3 class="title-item">{{ data.title }}</h3>
+    <p class="subtitle-item">{{ data.subtitle }}</p>
+    <div class="chip-center">
+      @for (skill of data.mainsKills; track $index) {
       <mat-chip>
-        <i
-          class="devicon-{{ skill.toLowerCase() }}-plain colored"
-        ></i>
+        <i class="devicon-{{ skill.toLowerCase() }}-plain colored"></i>
         {{ skill }}
       </mat-chip>
       }
-    </mat-chip-set>
-        <h3 class="title-item">{{data.title}}</h3>
-      <p class="subtitle-item">{{data.subtitle}}</p>
-      <a matButton="elevated" routerLink="/projects/{{data.id}}"><mat-icon>visibility</mat-icon>Detalles</a>
-      </div>
+    </div>
+
+    <a matButton="elevated" routerLink="/projects/{{ data.id }}">
+      <mat-icon>visibility</mat-icon>Detalles
+    </a>
+  </div>
 </div>
