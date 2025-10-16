@@ -6,6 +6,16 @@
         </div>
       </div>
       <div class="info-item">
+        <mat-chip-set>
+      @for (skill of data.skills; track $index) {
+      <mat-chip>
+        <i
+          class="devicon-{{ skill.toLowerCase() }}-plain colored"
+        ></i>
+        {{ skill }}
+      </mat-chip>
+      }
+    </mat-chip-set>
         <h3 class="title-item">{{data.title}}</h3>
       <p class="subtitle-item">{{data.subtitle}}</p>
       <a matButton="elevated" routerLink="/projects/{{data.id}}"><mat-icon>visibility</mat-icon>Detalles</a>
