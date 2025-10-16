@@ -54,6 +54,12 @@ mat-chip-set {
   }
 }
 
+.image-modal-panel .mat-dialog-container {
+  padding: 0 !important;
+  background: transparent;
+  box-shadow: none;
+}
+
 :root {
   /* Colores del footer (light theme) */
   --footer-bg: #2c3e50;

@@ -3,7 +3,7 @@ export interface Project {
   status?: 'development' | 'live' | 'archived';
   title: string;
   subtitle: string;
-  photo: string;
+  photos: string | string[];
   code: string | { front: string; back: string };
   link: string;
   skills: string | string[];

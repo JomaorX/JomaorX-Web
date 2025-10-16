@@ -11,7 +11,7 @@ export class ProjectService {
       status: 'development',
       title: 'Sharecipes',
       subtitle: 'Plataforma web para compartir recetas de cocina',
-      photo: 'sharecipes.png',
+      photos: ['sharecipes.png','sharecipes2.png'],
       description:
         'Sharecipes permite a los usuarios descubrir, subir, guardar y explorar recetas de forma sencilla e intuitiva.',
       things: [
@@ -53,7 +53,7 @@ export class ProjectService {
       status: 'development',
       title: 'ReserV',
       subtitle: 'Sistema de gestión de citas para peluquerías',
-      photo: 'reserV.png',
+      photos: ['reserV.png'],
       description: 'Plataforma completa que ofrece:',
       things: [
         'Reservas online con selección de horarios',
@@ -97,7 +97,7 @@ export class ProjectService {
       status: 'live',
       title: 'ChatFlow',
       subtitle: 'Plataforma de mensajería instantánea en tiempo real',
-      photo: 'chat.png',
+      photos: ['chat.png'],
       description: 'Aplicación de chat con las siguientes características:',
       things: [
         'Autenticación segura de usuarios',
@@ -133,7 +133,7 @@ export class ProjectService {
       status: 'live',
       title: 'PokeData',
       subtitle: 'Pokedex interactiva + juego de adivinanza con Pokémon',
-      photo: 'pokeData.png',
+      photos: ['pokeData.png'],
       description:
         'Aplicación web que consume la PokeAPI para mostrar información detallada de Pokémon, incluyendo:',
       things: [
@@ -165,7 +165,7 @@ export class ProjectService {
       title: 'F1Fan',
       subtitle:
         'Todo sobre la Fórmula 1: resultados, noticias, pilotos y escuderías',
-      photo: 'f1Fan.png',
+      photos: ['f1Fan.png'],
       description:
         'Plataforma informativa para fans de la Fórmula 1, con secciones dinámicas y diseño atractivo.',
       things: [

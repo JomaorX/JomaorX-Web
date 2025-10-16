@@ -41,11 +41,27 @@
     <div class="laptop-container">
       <img src="pantalla.png" alt="Laptop" class="laptop-image" />
       <div class="laptop-screen">
-        <img
-          [src]="project.photo"
-          alt="foto del proyecto {{ project.title }}"
-        />
-      </div>
+  <div class="carousel-container">
+  <button mat-icon-button class="carousel-nav left" (click)="prevPhoto()">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+
+  <div class="carousel-image-wrapper" (click)="openImageModal()">
+    <img
+      [src]="project.photos[currentPhotoIndex]"
+      alt="Foto del proyecto {{ project.title }}"
+      class="carousel-image"
+    />
+    <mat-icon class="zoom-icon">search</mat-icon>
+  </div>
+
+  <button mat-icon-button class="carousel-nav right" (click)="nextPhoto()">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>
+
+</div>
+
     </div>
   </section>
 
