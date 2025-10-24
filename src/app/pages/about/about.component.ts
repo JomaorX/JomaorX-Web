@@ -59,13 +59,13 @@ export class AboutComponent {
   otros: Education[] = [
     {
       title: 'API REST con Java y Spring Boot',
-      subtitle: 'En curso..',
+      subtitle: '',
       institution: 'Marcel Bosh',
       location: 'Udemy',
       period: '16 horas',
       image: 'spring.png',
       icon: 'location_on',
-      tags: ['Java', 'Spring'],
+      tags: ['Java', 'Spring', 'Hibernate', 'JUnit', 'Postman'],
     },
     {
       title: 'Laravel',
@@ -75,7 +75,7 @@ export class AboutComponent {
       period: '5 horas',
       image: 'laravel.png',
       icon: 'location_on',
-      tags: ['Php', 'Laravel', 'Eloquent'],
+      tags: ['Php', 'Laravel', 'Eloquent', 'Postman'],
     },
     {
       title: 'Angular',
