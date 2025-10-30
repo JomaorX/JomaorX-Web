@@ -65,7 +65,7 @@ export class AboutComponent {
       period: '16 horas',
       image: 'spring.png',
       icon: 'location_on',
-      tags: ['Java', 'Spring', 'Hibernate', 'JUnit', 'Postman'],
+      tags: ['Java', 'Spring', 'Hibernate', 'JWT', 'JUnit', 'Lombook', 'Mockito', 'Postman'],
     },
     {
       title: 'Laravel',
