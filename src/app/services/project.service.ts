@@ -10,10 +10,10 @@ export class ProjectService {
       id: 0,
       status: 'development',
       title: 'Sharecipes',
-      subtitle: 'Plataforma web para compartir recetas de cocina',
-      photos: ['sharecipes.png','sharecipes2.png'],
+      subtitle: 'API Rest para compartir recetas de cocina',
+      photos: ['sharecipes2.png'],
       description:
-        'Sharecipes permite a los usuarios descubrir, subir, guardar y explorar recetas de forma sencilla e intuitiva.',
+        'Sharecipes permite a los usuarios descubrir, subir, guardar y explorar recetas.',
       things: [
         'Búsqueda avanzada con filtros por categoría e ingredientes',
         'Subida de recetas con pasos, fotos e ingredientes',
@@ -25,25 +25,18 @@ export class ProjectService {
         'Gestión de base de datos MySQL con Eloquent ORM',
         'Rutas organizadas entre públicas y privadas',
       ],
-      code: {
-        front: 'https://github.com/JomaorX/Sharecipes-Front',
-        back: 'https://github.com/JomaorX/Sharecipes-Back',
-      },
-      link: 'https://sharecipes.onrender.com',
+      code: 'https://github.com/JomaorX/Sharecipes-Back',
+      link: '',
       skills: [
         'Laravel',
         'PHP',
         'Sanctum',
-        'React',
         'MySQL',
-        'HTML5',
-        'CSS3',
         'Eloquent',
         'REST API',
       ],
-      mainsKills: ['Laravel', 'React', 'MySQL', 'Sanctum'],
+      mainsKills: ['Laravel', 'MySQL', 'Sanctum'],
       features: [
-        'Interfaz amigable y responsive',
         'Autenticación y perfiles de usuario',
         'Sistema de favoritos',
       ],
@@ -191,6 +184,49 @@ export class ProjectService {
       ],
     },
   ];
+
+  // {
+  //     id: 0,
+  //     status: 'development',
+  //     title: 'Sharecipes',
+  //     subtitle: 'Plataforma web para compartir recetas de cocina',
+  //     photos: ['sharecipes.png','sharecipes2.png'],
+  //     description:
+  //       'Sharecipes permite a los usuarios descubrir, subir, guardar y explorar recetas de forma sencilla e intuitiva.',
+  //     things: [
+  //       'Búsqueda avanzada con filtros por categoría e ingredientes',
+  //       'Subida de recetas con pasos, fotos e ingredientes',
+  //       'Favoritos y gestión de recetas personales',
+  //     ],
+  //     learnings: [
+  //       'Autenticación con Sanctum',
+  //       'Construcción de API REST con Laravel y React',
+  //       'Gestión de base de datos MySQL con Eloquent ORM',
+  //       'Rutas organizadas entre públicas y privadas',
+  //     ],
+  //     code: {
+  //       front: 'https://github.com/JomaorX/Sharecipes-Front',
+  //       back: 'https://github.com/JomaorX/Sharecipes-Back',
+  //     },
+  //     link: 'https://sharecipes.onrender.com',
+  //     skills: [
+  //       'Laravel',
+  //       'PHP',
+  //       'Sanctum',
+  //       'React',
+  //       'MySQL',
+  //       'HTML5',
+  //       'CSS3',
+  //       'Eloquent',
+  //       'REST API',
+  //     ],
+  //     mainsKills: ['Laravel', 'React', 'MySQL', 'Sanctum'],
+  //     features: [
+  //       'Interfaz amigable y responsive',
+  //       'Autenticación y perfiles de usuario',
+  //       'Sistema de favoritos',
+  //     ],
+  //   },
 
   getProjects(): Project[] {
     return this.projects;

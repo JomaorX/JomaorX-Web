@@ -25,7 +25,8 @@
       </span>
     </div>
     <p class="project-subtitle">{{ project.subtitle }}</p>
-    <a
+    @if (project.link !== '') {
+      <a
       mat-flat-button
       color="primary"
       href="{{ project.link }}"
@@ -35,6 +36,7 @@
       <mat-icon>public</mat-icon>
       Ver Demo
     </a>
+    }
   </section>
 
   <section class="con container-2">
@@ -124,10 +126,12 @@
   <section class="con container-4 links-section">
     <h3>Enlaces</h3>
     <div class="buttons-container">
-      <a matFab extended href="{{ project.link }}" target="_blank">
+      @if(project.link !== ''){
+        <a matFab extended href="{{ project.link }}" target="_blank">
         <mat-icon>public</mat-icon>
         Demo
       </a>
+      }
       @if (typeof project.code === 'string') {
       <a matFab extended href="{{ project.code }}" target="_blank">
         <mat-icon>code</mat-icon>
