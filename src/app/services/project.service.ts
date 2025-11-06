@@ -9,6 +9,39 @@ export class ProjectService {
     {
       id: 0,
       status: 'development',
+      title: 'NakamaHub',
+      subtitle:
+        'API REST para compartir contenido sobre anime, manga, series y más',
+      photos: ['nakamahub1.png'],
+      description:
+        'NakamaHub es una plataforma backend que permite a los usuarios registrarse, publicar contenido y participar en discusiones sobre sus temas favoritos del mundo otaku.',
+      things: [
+        'Autenticación con roles (USER, MODERATOR, ADMIN)',
+        'Creación y consulta de posts por tipo de contenido',
+        'Validación inteligente entre categorías y tipos',
+        'Sistema de comentarios vinculado a usuarios y posts *(en desarrollo)*',
+      ],
+      learnings: [
+        'Autenticación con JWT y Spring Security',
+        'Diseño de API REST con Java y Spring Boot',
+        'Persistencia con JPA/Hibernate y MySQL',
+        'Gestión de roles y seguridad basada en tokens',
+        'Organización modular con GitFlow y control de versiones',
+      ],
+      code: 'https://github.com/JomaorX/nakama-hub-backend',
+      link: 'https://documenter.getpostman.com/view/46853536/2sB3WqvgX9',
+      skills: ['Java', 'Spring Boot', 'JWT', 'Hibernate', 'MySQL', 'Postman'],
+      mainSkills: ['Spring Boot', 'JWT', 'Hibernate'],
+      features: [
+        'Registro y login con cifrado de contraseñas',
+        'Roles y permisos para moderación',
+        'Publicación de contenido por categoría',
+        'Documentación pública con Postman',
+      ],
+    },
+    {
+      id: 1,
+      status: 'development',
       title: 'Sharecipes',
       subtitle: 'API Rest para compartir recetas de cocina',
       photos: ['sharecipes2.png'],
@@ -27,22 +60,12 @@ export class ProjectService {
       ],
       code: 'https://github.com/JomaorX/Sharecipes-Back',
       link: '',
-      skills: [
-        'Laravel',
-        'PHP',
-        'Sanctum',
-        'MySQL',
-        'Eloquent',
-        'REST API',
-      ],
-      mainsKills: ['Laravel', 'MySQL', 'Sanctum'],
-      features: [
-        'Autenticación y perfiles de usuario',
-        'Sistema de favoritos',
-      ],
+      skills: ['Laravel', 'PHP', 'Sanctum', 'MySQL', 'Eloquent', 'REST API'],
+      mainSkills: ['Laravel', 'MySQL', 'Sanctum'],
+      features: ['Autenticación y perfiles de usuario', 'Sistema de favoritos'],
     },
     {
-      id: 1,
+      id: 2,
       status: 'development',
       title: 'ReserV',
       subtitle: 'Sistema de gestión de citas para peluquerías',
@@ -77,7 +100,7 @@ export class ProjectService {
         'HTML5',
         'CSS3',
       ],
-      mainsKills: ['AngularJS', 'NodeJS', 'Express', 'MySQL'],
+      mainSkills: ['AngularJS', 'NodeJS', 'Express', 'MySQL'],
       features: [
         'Calendario interactivo',
         'Perfiles de clientes',
@@ -86,7 +109,7 @@ export class ProjectService {
       ],
     },
     {
-      id: 2,
+      id: 3,
       status: 'live',
       title: 'ChatFlow',
       subtitle: 'Plataforma de mensajería instantánea en tiempo real',
@@ -113,7 +136,7 @@ export class ProjectService {
         'HTML5',
         'CSS3',
       ],
-      mainsKills: ['NodeJS', 'Socket.IO', 'MongoDB', 'JWT'],
+      mainSkills: ['NodeJS', 'Socket.IO', 'MongoDB', 'JWT'],
       features: [
         'Interfaz de usuario intuitiva',
         'Encriptación de mensajes',
@@ -122,7 +145,7 @@ export class ProjectService {
       ],
     },
     {
-      id: 3,
+      id: 4,
       status: 'live',
       title: 'PokeData',
       subtitle: 'Pokedex interactiva + juego de adivinanza con Pokémon',
@@ -142,7 +165,7 @@ export class ProjectService {
       code: 'https://github.com/JomaorX/PokeData',
       link: 'https://pokedata-28w9.onrender.com',
       skills: ['JavaScript', 'HTML5', 'CSS3', 'API REST', 'Responsive Design'],
-      mainsKills: ['JavaScript', 'API REST', 'CSS3'],
+      mainSkills: ['JavaScript', 'API REST', 'CSS3'],
       features: [
         'Búsqueda en tiempo real de Pokémon',
         'Visualización completa de stats y evoluciones',
@@ -153,7 +176,7 @@ export class ProjectService {
       ],
     },
     {
-      id: 4,
+      id: 5,
       status: 'live',
       title: 'F1Fan',
       subtitle:
@@ -175,7 +198,7 @@ export class ProjectService {
       code: 'https://github.com/JomaorX/F1FAN',
       link: 'https://f1fan.onrender.com/',
       skills: ['AngularJS', 'TypeScript', 'HTML5', 'CSS3', 'Angular Material'],
-      mainsKills: ['AngularJS', 'TypeScript', 'Angular Material'],
+      mainSkills: ['AngularJS', 'TypeScript', 'Angular Material'],
       features: [
         'Listado de pilotos y equipos actualizado',
         'Noticias filtrables por categoría',
@@ -220,7 +243,7 @@ export class ProjectService {
   //       'Eloquent',
   //       'REST API',
   //     ],
-  //     mainsKills: ['Laravel', 'React', 'MySQL', 'Sanctum'],
+  //     mainSkills: ['Laravel', 'React', 'MySQL', 'Sanctum'],
   //     features: [
   //       'Interfaz amigable y responsive',
   //       'Autenticación y perfiles de usuario',

@@ -10,7 +10,7 @@
     <h3 class="title-item">{{ data.title }}</h3>
     <p class="subtitle-item">{{ data.subtitle }}</p>
     <div class="chip-center">
-      @for (skill of data.mainsKills; track $index) {
+      @for (skill of data.mainSkills; track $index) {
       <mat-chip>
         <i class="devicon-{{ skill.toLowerCase() }}-plain colored"></i>
         {{ skill }}

@@ -7,7 +7,7 @@ export interface Project {
   code: string | { front: string; back: string };
   link: string;
   skills: string | string[];
-  mainsKills: string[];
+  mainSkills: string[];
   description: string;
   things: string[];
   learnings: string[];

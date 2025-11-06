@@ -1,153 +1,80 @@
-<!-- project-detail.component.html -->
 @if (!project) {
-<div class="loading-spinner">
-  <div class="text-load">
-    <h2>
-      Cargando Proyecto
-      <mat-icon>traffic</mat-icon>
-    </h2>
-  </div>
-  <mat-spinner></mat-spinner>
-</div>
-} @else {
-<div class="main-container">
-  <section class="con container-1">
-    <div class="header-content">
-      <h1>{{ project.title }}</h1>
-      <span class="project-status" [class]="'status-' + project.status">
-        {{
-          project.status === "development"
-            ? "EN DESARROLLO"
-            : project.status === "live"
-            ? "DISPONIBLE"
-            : "ARCHIVADO"
-        }}
-      </span>
+  <div class="loading-spinner">
+    <div class="text-load">
+      <h2>Cargando Proyecto <mat-icon>traffic</mat-icon></h2>
     </div>
-    <p class="project-subtitle">{{ project.subtitle }}</p>
-    @if (project.link !== '') {
-      <a
-      mat-flat-button
-      color="primary"
-      href="{{ project.link }}"
-      target="_blank"
-      class="demo-button"
-    >
-      <mat-icon>public</mat-icon>
-      Ver Demo
-    </a>
-    }
-  </section>
-
-  <section class="con container-2">
+    <mat-spinner></mat-spinner>
+  </div>
+} @else {
+  <div class="item-container">
     <div class="laptop-container">
       <img src="pantalla.png" alt="Laptop" class="laptop-image" />
       <div class="laptop-screen">
-  <div class="carousel-container">
-  <button mat-icon-button class="carousel-nav left" (click)="prevPhoto()">
-    <mat-icon>chevron_left</mat-icon>
-  </button>
-
-  <div class="carousel-image-wrapper" (click)="openImageModal()">
-    <img
-      [src]="project.photos[currentPhotoIndex]"
-      alt="Foto del proyecto {{ project.title }}"
-      class="carousel-image"
-    />
-    <mat-icon class="zoom-icon">search</mat-icon>
-  </div>
-
-  <button mat-icon-button class="carousel-nav right" (click)="nextPhoto()">
-    <mat-icon>chevron_right</mat-icon>
-  </button>
-</div>
-
-</div>
-
+        <img [src]="project.photos[currentPhotoIndex]" alt="Captura de {{ project.title }}" />
+      </div>
     </div>
-  </section>
 
-  <!-- Actualiza la sección de descripción para mejor formato -->
-  <section class="con container-3">
-    <h3>Descripción</h3>
-    <div class="description-content">
-      <!-- Usa <pre> para mantener saltos de línea -->
-      <span>{{ project.description }}</span>
-      <ul class="things-list">
-        @for (thing of project.things; track $index) {
-        <li class="thing-item">
-          <mat-icon class="thing-icon">arrow_right</mat-icon>
-          <span>{{ thing }}</span>
-        </li>
+    <div class="info-item">
+      <h3 class="title-item">{{ project.title }}</h3>
+      <p class="subtitle-item">{{ project.subtitle }}</p>
+
+      <div class="chip-center">
+        @for (skill of project.skills; track $index) {
+          <mat-chip>
+            <i class="devicon-{{ skill.toLowerCase() }}-plain colored"></i>
+            {{ skill }}
+          </mat-chip>
         }
-      </ul>
+      </div>
+
+      @if (project.link !== '') {
+        <a matButton="elevated" href="{{ project.link }}" target="_blank">
+          <mat-icon>public</mat-icon> Demo
+        </a>
+      }
+
+      <div class="section-block">
+        <h4>Descripción</h4>
+        <p>{{ project.description }}</p>
+        <ul>
+          @for (thing of project.things; track $index) {
+            <li>{{ thing }}</li>
+          }
+        </ul>
+      </div>
+
+      <div class="section-block">
+        <h4>Aprendizajes</h4>
+        <ul>
+          @for (learning of project.learnings; track $index) {
+            <li>{{ learning }}</li>
+          }
+        </ul>
+      </div>
+
+      <div class="section-block">
+        <h4>Funcionalidades clave</h4>
+        <ul>
+          @for (feature of project.features; track $index) {
+            <li>{{ feature }}</li>
+          }
+        </ul>
+      </div>
+
+      <div class="buttons-detail">
+        @if (typeof project.code === 'string') {
+          <a matButton href="{{ project.code }}" target="_blank">
+            <mat-icon>code</mat-icon> Código
+          </a>
+        } @else {
+          <a matButton href="{{ project.code.front }}" target="_blank">
+            <mat-icon>code</mat-icon> Frontend
+          </a>
+          <a matButton href="{{ project.code.back }}" target="_blank">
+            <mat-icon>code</mat-icon> Backend
+          </a>
+        }
+      </div>
     </div>
-  </section>
-
-  <!-- Mejora la sección de aprendizajes -->
-  <section class="con container-learnings">
-    <h3>Aprendizajes</h3>
-    <ul class="learnings-list">
-      @for (learning of project.learnings; track $index) {
-      <li class="learning-item">
-        <mat-icon class="learning-icon">arrow_right</mat-icon>
-        <span>{{ learning }}</span>
-      </li>
-      }
-    </ul>
-  </section>
-
-  <section class="con container-features">
-    <h3>Funcionalidades clave</h3>
-    <ul class="features-list">
-      @for (feature of project.features; track $index) {
-      <li class="feature-item">
-        <mat-icon class="feature-icon">arrow_right</mat-icon>
-        <span>{{ feature }}</span>
-      </li>
-      }
-    </ul>
-  </section>
-
-  <section class="con container-4">
-    <h3>Herramientas utilizadas</h3>
-    <mat-chip-set>
-      @for (skill of project.skills; track $index) {
-      <mat-chip>
-        <i
-          class="devicon-{{ skill.toLowerCase() }}-plain colored"
-        ></i>
-        {{ skill }}
-      </mat-chip>
-      }
-    </mat-chip-set>
-  </section>
-
-  <section class="con container-4 links-section">
-    <h3>Enlaces</h3>
-    <div class="buttons-container">
-      @if(project.link !== ''){
-        <a matFab extended href="{{ project.link }}" target="_blank">
-        <mat-icon>public</mat-icon>
-        Demo
-      </a>
-      }
-      @if (typeof project.code === 'string') {
-      <a matFab extended href="{{ project.code }}" target="_blank">
-        <mat-icon>code</mat-icon>
-        Código
-      </a>
-      } @else {
-      <a matFab extended href="{{ project.code.front }}" target="_blank">
-        <mat-icon>code</mat-icon>
-        Frontend
-      </a>
-      <a matFab extended href="{{ project.code.back }}" target="_blank">
-        <mat-icon>code</mat-icon>
-        Backend
-      </a>
-      }
-    </div>
-  </section>
-</div>
+  </div>
 }
