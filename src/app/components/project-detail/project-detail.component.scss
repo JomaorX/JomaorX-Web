@@ -24,6 +24,7 @@
 }
 
 .main-container {
+    background-color: var(--p-bg-card);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -145,6 +146,7 @@
 
 /* Laptop Preview */
 .container-2 {
+    
     width: 100%;
     max-width: 800px;
 
@@ -185,12 +187,12 @@
 /* Content Sections */
 .container-4,
 .container-features {
+    border-width: 0 2px 0 2px;
+    border-style: solid;
     width: 100%;
     max-width: 800px;
     padding: 1.5rem;
-    background: rgba(0, 0, 255, 0.05);
     border-radius: 8px;
-    border-left: 3px solid #2C3E50;
     margin: 1.5rem 0;
 
     h3 {
@@ -215,9 +217,10 @@
     width: 100%;
     max-width: 800px;
     padding: 1.5rem;
-    background: rgba(255, 215, 0, 0.05);
     border-radius: 8px;
-    border-left: 3px solid #00ff73;
+    border-width: 4px 2px 0 2px;
+    border-style: solid;
+    border-color: #00ff73;
     margin: 1.5rem 0;
 
     h3 {
@@ -276,9 +279,10 @@
     width: 100%;
     max-width: 800px;
     padding: 1.5rem;
-    background: rgba(255, 215, 0, 0.05);
     border-radius: 8px;
-    border-left: 3px solid #FFD700;
+    border-width: 0 2px 0 2px;
+    border-style: solid;
+    border-color: #FFD700;
     margin: 1.5rem 0;
 
     h3 {
@@ -318,9 +322,10 @@
 }
 
 .container-features {
-    background: rgba(0, 180, 204, 0.05);
     border-radius: 8px;
-    border-left: 3px solid #00acc1;
+    border-width: 0 2px 0 2px;
+    border-style: solid;
+    border-color: #00acc1;
 
     .features-list {
         list-style: none;
@@ -344,6 +349,9 @@
 
 /* Links Section */
 .links-section {
+        border-width: 0 2px 4px 2px;
+            border-style: solid;
+            border-color: #000;
     .buttons-container {
         display: flex;
         flex-wrap: wrap;
@@ -364,9 +372,10 @@
 }
 
 .container-3,
+.container-4,
 .container-learnings,
 .container-features {
-    border-left-width: 2px;
+    background-color: var(--p-bg-card2);
     border-radius: 6px;
 }
 
