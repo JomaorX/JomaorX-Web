@@ -1,4 +1,4 @@
-# JomaorxWeb
+# JomaorWeb
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
 
@@ -60,6 +60,6 @@ For more information on using the Angular CLI, including detailed command refere
 
 ## Aviso Legal
 
-Este proyecto es parte del portafolio personal de José Miguel Martínez Ortiz (Jomaorx). Todo el código, diseño y estructura han sido desarrollados de forma original y única. 
+Este proyecto es parte del portafolio personal de José Miguel Martínez Ortiz (JomaorX). Todo el código, diseño y estructura han sido desarrollados de forma original y única. 
 
 Queda **prohibida** la copia, redistribución o modificación del contenido sin autorización expresa del autor. Este repositorio no está destinado a ser reutilizado como plantilla ni como base para otros proyectos públicos o privados.
