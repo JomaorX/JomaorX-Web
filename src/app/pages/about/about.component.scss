@@ -22,12 +22,10 @@
 
 /* Card Styling */
 mat-card {
-    border: none;
     background-color: var(--h-bg);
-    background-image: var(--h-bgi);
     border-radius: 12px;
     /* Bordes más suaves para un look moderno */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border: 4px solid var(--bdr-c1);
     /* Sombra más pronunciada */
     padding: 15px 0 15px 0;
 }
@@ -54,9 +52,8 @@ mat-card-title-group {
 }
 
 mat-card-title-group img {
-    border: 4px solid #001E41;
     /* Un color de borde que resalte */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     width: 120px;
     /* Tamaño un poco más grande para la imagen */
@@ -83,20 +80,19 @@ mat-card-title {
     font-weight: 700;
     /* Negrita */
     margin-bottom: 5px;
-    color: #fff;
+    color: var(--a-h2);
     /* Un gris claro para el título */
 }
 
 mat-card-subtitle {
     font-size: 1.3em;
     /* Subtítulo un poco más grande */
-    color: #001E41;
+    color: var(--h-h2);
     /* Un gris más oscuro para el subtítulo */
 }
 
 /* Content Styling */
 mat-card-content {
-    background-color: var(--ac-bg);
     width: fit-content;
     margin: 0 auto;
     padding: 10px 10px;

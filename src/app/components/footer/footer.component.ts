@@ -10,5 +10,5 @@ import { RouterLink } from '@angular/router';
 })
 export class FooterComponent {
   currentYear: number = new Date().getFullYear();
-  authorName: string = 'José Miguel Martínez Ortiz'; // Reemplaza con tu nombre
+  authorName: string = 'JomaorX';
 }

@@ -87,16 +87,21 @@ mat-chip-set {
   --mobile-link-bg: transparent;
   --mobile-link-hover-bg: rgba(0, 0, 0, 0.04);
 
+
+  //Bordes
+  --bdr-c1: #002E41;
+  --bdr-c2: ;
+
   //home
-  --h-bg: #1b518a;
-  --h-bgi: url("https://www.transparenttextures.com/patterns/escheresque.png");
+  --h-bg: #4E7097;
   --h-h2: #CDD5EB;
-  --h-p: #fff;
-  --icon-filter: brightness(0) invert(1);
+  --h-p: #222;
+  --icon-filter: brightness(0) invert(0.2);
 
   //about 
-  --ac-bg: #fff2;
-  --a-p: #222;
+  --ac-bg: #CDD5EB;
+  --a-p: #333;
+  --a-h2: #222;
 
   //education
   --e-title: #001e41;
@@ -162,6 +167,10 @@ mat-chip-set {
   /* Azul más suave */
   /* --footer-social-icon puede mantenerse igual */
 
+  //Bordes
+    --bdr-c1: #CDD5EB;
+    --bdr-c2: ;
+
   --header-bg: #232323;
   --header-text: #ffffff;
   --header-icon: #ffffff;
@@ -170,14 +179,15 @@ mat-chip-set {
   --mobile-link-hover-bg: rgba(255, 255, 255, 0.08);
 
   //home
-  --h-bg: #007bffab;
-  --h-bgi: url("https://www.transparenttextures.com/patterns/escheresque-dark.png");
+  --h-bg: #2d4057;
   --h-h2: #CDD5EB;
   --h-p: #eee;
+  --icon-filter: brightness(0) invert(1);
 
   //about 
-  --ac-bg: #0042;
-  --a-p: #eee;
+  --ac-bg: #fff3;
+  --a-p: #ccc;
+  --a-h2: #ccc;
 
   // education
   --e-title: #CDD5EB;
