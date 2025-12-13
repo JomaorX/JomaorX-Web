@@ -1,12 +1,32 @@
 /* project-detail.component.scss */
+/* --- THEMING SYSTEM --- */
+/* Default (Light Mode) - "Frosted Ice" */
+$wrapper-bg: transparent;
+/* Use global background */
+$glass-bg: rgba(255, 255, 255, 0.6);
+/* White Frosted Glass */
+$glass-border: rgba(255, 255, 255, 0.4);
+$glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+$text-primary: #0f172a;
+/* Slate 900 */
+$text-secondary: #475569;
+/* Slate 600 */
+$title-gradient: linear-gradient(to right, #0f172a 20%, #3b82f6 100%);
+$panel-border: rgba(0, 0, 0, 0.05);
 
-// Variables
-$glass-bg: rgba(255, 255, 255, 0.05);
-$glass-border: rgba(255, 255, 255, 0.1);
-$glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-$primary-gradient: linear-gradient(135deg, #00acc1 0%, #00e5ff 100%);
-$text-primary: #ffffff;
-$text-secondary: rgba(255, 255, 255, 0.7);
+:host {
+    display: block;
+}
+
+/* Dark Mode Override ("Premium Dark Glass") */
+:host-context(.dark-theme) {
+    --glass-bg-override: rgba(30, 41, 59, 0.75);
+    --glass-border-override: rgba(255, 255, 255, 0.15);
+    --text-primary-override: #f1f5f9;
+    --text-secondary-override: #cbd5e1;
+    --title-gradient-override: linear-gradient(to right, #fff 20%, #7dd3fc 100%);
+    --panel-border-override: rgba(255, 255, 255, 0.15);
+}
 
 @mixin glass-effect {
     background: $glass-bg;
@@ -14,6 +34,40 @@ $text-secondary: rgba(255, 255, 255, 0.7);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid $glass-border;
     box-shadow: $glass-shadow;
+
+    /* Theme-aware overrides via CSS custom properties if they exist, else fallback to SCSS vars */
+    /* Note: Since SCSS vars are static, we'll use a data-theme attribute or direct context selector in styles */
+    /* Better approach for this single file refactor: Use CSS variables mapped to the SCSS vars, overridden by .dark-theme */
+}
+
+/* Define local CSS variables to handle the switch cleanly */
+.project-wrapper {
+    /* Default (Light) */
+    --pd-glass-bg: rgba(255, 255, 255, 0.7);
+    /* Slightly more opaque */
+    --pd-glass-border: #cbd5e1;
+    /* Slate 300 - SOLID visible border */
+    --pd-text-primary: #0f172a;
+    --pd-text-secondary: #475569;
+    --pd-title-gradient: linear-gradient(to right, #0f172a 20%, #3b82f6 100%);
+    --pd-panel-border: #cbd5e1;
+    /* Slate 300 - Visible header separator */
+    --pd-hero-overlay: radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.4) 60%, transparent 100%);
+
+    /* Dark Theme Context */
+    :host-context(.dark-theme) & {
+        --pd-glass-bg: rgba(30, 41, 59, 0.75);
+        --pd-glass-border: rgba(255, 255, 255, 0.15);
+        --pd-text-primary: #f1f5f9;
+        --pd-text-secondary: #cbd5e1;
+        --pd-title-gradient: linear-gradient(to right, #fff 20%, #7dd3fc 100%);
+        --pd-panel-border: rgba(255, 255, 255, 0.15);
+        --pd-hero-overlay: radial-gradient(circle at bottom left, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 60%, transparent 100%);
+    }
+
+    min-height: 100vh;
+    color: var(--pd-text-primary);
+    padding-bottom: 4rem;
 }
 
 @keyframes fadeInUp {
@@ -35,19 +89,13 @@ $text-secondary: rgba(255, 255, 255, 0.7);
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    color: $text-primary;
+    color: var(--pd-text-primary);
+    /* Updated to var */
 
     p {
         font-size: 1.2rem;
         letter-spacing: 1px;
     }
-}
-
-.project-wrapper {
-    min-height: 100vh;
-    background-color: #0f172a; // Dark base background
-    color: $text-primary;
-    padding-bottom: 4rem;
 }
 
 /* --- Hero Section --- */
@@ -89,9 +137,8 @@ $text-secondary: rgba(255, 255, 255, 0.7);
     left: 0;
     width: 100%;
     height: 100%;
-    /* Cinematic gradient: dark bottom/left for text readability */
-    background: radial-gradient(circle at bottom left, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 60%, transparent 100%),
-        linear-gradient(to bottom, transparent 0%, rgba(15, 23, 42, 0.8) 100%);
+    /* Cinematic gradient: adapts to theme via var */
+    background: var(--pd-hero-overlay);
     z-index: 1;
 }
 
@@ -148,7 +195,7 @@ $text-secondary: rgba(255, 255, 255, 0.7);
     /* Massive title */
     font-weight: 800;
     margin: 0;
-    background: linear-gradient(to right, #fff 20%, #7dd3fc 100%);
+    background: var(--pd-title-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -162,7 +209,7 @@ $text-secondary: rgba(255, 255, 255, 0.7);
 .subtitle {
     font-size: 1.5rem;
     font-weight: 300;
-    color: #cbd5e1;
+    color: var(--pd-text-secondary);
     max-width: 700px;
     margin: 0;
     line-height: 1.5;
@@ -220,19 +267,31 @@ $text-secondary: rgba(255, 255, 255, 0.7);
 }
 
 /* --- Shared Panels --- */
+/* --- Shared Panels --- */
 .glass-panel {
-    @include glass-effect;
-    background: rgba(30, 41, 59, 0.75); // Increased opacity for better contrast
-    border: 1px solid rgba(255, 255, 255, 0.15); // Brighter border
+    background: var(--pd-glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--pd-glass-border);
     border-radius: 16px;
     padding: 2rem;
     margin-bottom: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    /* Soft basic shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
     &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-        border-color: rgba(255, 255, 255, 0.25); // Glow border on hover
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        /* Slightly deeper shadow on hover */
+        border-color: var(--pd-text-primary);
+        /* Highlight border on hover */
+
+        :host-context(.dark-theme) & {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            /* Stronger shadow in dark mode */
+            border-color: rgba(255, 255, 255, 0.25);
+        }
     }
 }
 
@@ -240,7 +299,7 @@ $text-secondary: rgba(255, 255, 255, 0.7);
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--pd-panel-border);
     padding-bottom: 1rem;
 
     h3 {
@@ -250,7 +309,7 @@ $text-secondary: rgba(255, 255, 255, 0.7);
         display: flex;
         align-items: center;
         gap: 0.8rem;
-        color: #fff;
+        color: var(--pd-text-primary);
 
         mat-icon {
             color: #00e5ff;
@@ -352,7 +411,7 @@ $text-secondary: rgba(255, 255, 255, 0.7);
 .text-content {
     font-size: 1.05rem;
     line-height: 1.8;
-    color: #e2e8f0;
+    color: var(--pd-text-primary);
     margin-bottom: 2rem;
     white-space: pre-line;
 }
@@ -363,35 +422,51 @@ $text-secondary: rgba(255, 255, 255, 0.7);
     gap: 1rem;
 
     .thing-card {
-        background: rgba(255, 255, 255, 0.08);
-        /* More visible background */
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        /* Crisper border */
+        background: rgba(0, 0, 0, 0.02);
+        /* Very subtle grey */
+        border: 1px solid #cbd5e1;
+        /* Slate 300 - Crisp border */
+        color: #334155;
+        /* Slate 700 */
         padding: 1rem;
         border-radius: 8px;
         display: flex;
         align-items: center;
         gap: 0.8rem;
         transition: background 0.3s, transform 0.2s;
-        /* Added transform for pop */
+
+        /* Dark Mode Override */
+        :host-context(.dark-theme) & {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #e2e8f0;
+        }
 
         &:hover {
-            background: rgba(255, 255, 255, 0.12);
-            /* Brighter hover */
+            background: rgba(0, 0, 0, 0.05);
+            /* Darker on hover (Light) */
             transform: translateY(-2px);
-            /* Subtle lift */
+
+            :host-context(.dark-theme) & {
+                background: rgba(255, 255, 255, 0.12);
+                /* Brighter on hover (Dark) */
+            }
         }
 
         mat-icon {
-            color: #00e5ff;
+            color: #0284c7;
+            /* Sky 600 - Good contrast for Light */
+
+            :host-context(.dark-theme) & {
+                color: #00e5ff;
+                /* Cyan - Good for Dark */
+            }
+
             font-size: 1.5rem;
-            /* Increased slightly for overflow fix */
             width: 1.5rem;
             height: 1.5rem;
             flex-shrink: 0;
-            /* Prevents icon from squishing */
             overflow: visible;
-            /* Ensures content isn't cut off */
         }
 
         span {
@@ -407,25 +482,7 @@ $text-secondary: rgba(255, 255, 255, 0.7);
     gap: 0.8rem;
 
     .tech-chip {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 50px;
-        font-size: 0.9rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s;
-
-        &:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: scale(1.05);
-            border-color: #00e5ff;
-        }
-
-        i {
-            font-size: 1.2rem;
-        }
+        /* Styles moved to tech-chip.component.scss */
     }
 }
 
@@ -440,11 +497,23 @@ $text-secondary: rgba(255, 255, 255, 0.7);
         gap: 1rem;
         margin-bottom: 1rem;
         padding: 0.8rem;
-        background: rgba(255, 255, 255, 0.02);
+        background: rgba(0, 0, 0, 0.02);
+        /* Light Mode bg */
+        border: 1px solid transparent;
+        /* Placeholder */
         border-radius: 8px;
 
+        :host-context(.dark-theme) & {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
         .bullet-icon {
-            color: #ffd700; // Accent color for lists
+            color: #b45309; // Amber 700 - Visible on light
+
+            :host-context(.dark-theme) & {
+                color: #ffd700; // Gold - Visible on dark
+            }
+
             font-size: 1.2rem;
             margin-top: 2px;
         }
@@ -452,7 +521,13 @@ $text-secondary: rgba(255, 255, 255, 0.7);
         span {
             font-size: 0.95rem;
             line-height: 1.5;
-            color: #e2e8f0;
+            color: #334155;
+            /* Slate 700 - Light Mode text */
+
+            :host-context(.dark-theme) & {
+                color: #e2e8f0;
+                /* Light text for Dark Mode */
+            }
         }
     }
 }

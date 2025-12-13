@@ -111,10 +111,7 @@
         </div>
         <div class="tech-chips">
           @for (skill of project.skills; track $index) {
-          <div class="tech-chip">
-            <i class="devicon-{{ skill.toLowerCase() }}-plain colored"></i>
-            <span>{{ skill }}</span>
-          </div>
+          <app-tech-chip [name]="skill"></app-tech-chip>
           }
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MaterialModule } from '../../material.module';
+import { TechChipComponent } from '../tech-chip/tech-chip.component';
 import { ProjectService } from '../../services/project.service';
 import { Project } from '../../models/Project';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -7,9 +8,11 @@ import { ProjectCardComponent } from "../project-card/project-card.component";
 import { MatDialog } from '@angular/material/dialog';
 import { ImageModalComponent } from '../image-modal/image-modal.component';
 
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-project-detail',
-  imports: [MaterialModule],
+  imports: [CommonModule, MaterialModule, TechChipComponent],
   templateUrl: './project-detail.component.html',
   styleUrl: './project-detail.component.scss',
 })
@@ -22,7 +25,7 @@ export class ProjectDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private dialog: MatDialog
-  ) {}
+  ) { }
   ngOnInit(): void {
     this.loadProject();
   }
@@ -60,15 +63,15 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   openImageModal() {
-  this.dialog.open(ImageModalComponent, {
-    data: {
-      src: this.project?.photos[this.currentPhotoIndex],
-      title: this.project?.title,
-    },
-    panelClass: 'image-modal-panel',
-    maxWidth: '90vw',
-    maxHeight: '80vh',
-    autoFocus: false,
-  });
+    this.dialog.open(ImageModalComponent, {
+      data: {
+        src: this.project?.photos[this.currentPhotoIndex],
+        title: this.project?.title,
+      },
+      panelClass: 'image-modal-panel',
+      maxWidth: '90vw',
+      maxHeight: '80vh',
+      autoFocus: false,
+    });
   }
 }
