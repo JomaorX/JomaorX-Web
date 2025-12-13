@@ -13,23 +13,39 @@
       header-focus-state-layer-color: rgba(47, 109, 180, 0.1),
       actions-divider-color: #ccddee));
 
-  --s-bg: #409ba5d5;
-  --s-bgi: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+  /* --- GLOBAL THEME VARIABLES --- */
+
+  /* Light Theme (Default) */
+  --s-bg: #f1f5f9;
+  /* Slate 100 */
+  --s-bgi: url("https://www.transparenttextures.com/patterns/subtle-dots.png"),
+    linear-gradient(to bottom, #f1f5f9 0%, #cbd5e1 100%);
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
 }
 
-html,
+html {
+  height: 100%;
+}
+
 body {
-  body {
-    font-family: "Montserrat", "Helvetica Neue", sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    position: relative;
-    background-color: var(--s-bg);
-    background-image: var(--s-bgi);
-    background-repeat: repeat;
-    background-attachment: fixed;
-  }
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  position: relative;
+
+  /* Global Background Application */
+  background-color: var(--s-bg);
+  background-image: var(--s-bgi);
+  background-repeat: repeat;
+  /* Textures usually repeat */
+  background-attachment: fixed;
+  background-size: auto;
+  /* Keep texture at original scale, gradient will stretch if separated but here they are combined. */
+
+  color: var(--text-primary);
 }
 
 
@@ -143,6 +159,17 @@ mat-chip-set {
   //chips
   @include mat.chips-overrides((label-text-color: #ddd));
 
+  /* DARK THEME BACKGROUND */
+  --s-bg: #0f172a;
+  /* Slate 900 */
+  /* "Subtle Dots" Texture + Deep Gradient */
+  --s-bgi: url("https://www.transparenttextures.com/patterns/subtle-dots.png"),
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.15) 0%, transparent 50%),
+    linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+
   //form
   @include mat.form-field-overrides((outlined-outline-color:#aaa,
       outlined-label-text-color: #aaa,
@@ -152,9 +179,7 @@ mat-chip-set {
       outlined-hover-outline-color: #fff,
     ));
 
-  //todo
-  --s-bg: #07e6ffd5;
-  --s-bgi: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+
 
   /* Ajustes para dark theme (modifica según prefieras) */
   --footer-bg: #1a252f;
@@ -168,8 +193,8 @@ mat-chip-set {
   /* --footer-social-icon puede mantenerse igual */
 
   //Bordes
-    --bdr-c1: #CDD5EB;
-    --bdr-c2: ;
+  --bdr-c1: #CDD5EB;
+  --bdr-c2: ;
 
   --header-bg: #232323;
   --header-text: #ffffff;
@@ -201,7 +226,7 @@ mat-chip-set {
   --p-bor-tit: #000;
   --p-bg-tit: #0006;
 
-  
+
   //project card
   --p-sub-col: #ccc;
   --p-but-col: #000;

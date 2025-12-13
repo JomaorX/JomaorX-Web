@@ -1,0 +1,47 @@
+.tech-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+
+    /* Premium Glass Style - Defaults (Dark Mode Optimized) */
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #e2e8f0;
+    /* Light text by default */
+
+    transition: all 0.3s ease;
+    cursor: default;
+    user-select: none;
+
+    /* Hardware acceleration */
+    transform: translateZ(0);
+    will-change: transform;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: #00e5ff;
+        /* Cyan glow */
+        transform: scale(1.05) translateZ(0);
+        box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
+    }
+
+    i {
+        font-size: 1.2rem;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+/* Light Mode Overrides (if global .light-theme class exists or :root vars differ) */
+/* We can use :host-context to check for parent theme class */
+:host-context(body:not(.dark-theme)) .tech-chip {
+    /* If the body does NOT have .dark-theme (assuming default is light or handled elsewhere) */
+    /* BUT wait, user said "global background is dark now". */
+    /* If global background is dark everywhere, we might not need light overrides yet. */
+    /* Keeping it safe for now: enforcing the dark-friendly glass style since the user liked it on Project Details */
+}

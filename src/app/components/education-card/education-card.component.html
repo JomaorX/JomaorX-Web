@@ -1,33 +1,29 @@
 <mat-card class="education-card" appearance="outlined">
-    <div class="header-container">
-      <div class="left-block">
-        <img [src]="data.image" [alt]="data.institution" />
-        <div class="header-titles">
-          <mat-card-title class="title">{{ data.title }}</mat-card-title>
-          <mat-card-subtitle class="subtitle">
-            <mat-icon>{{ data.icon || 'school' }}</mat-icon>
-            {{ data.institution }}
-          </mat-card-subtitle>
-        </div>
-      </div>
-      <div class="right-block">
-        <span>{{ data.period }}<br/>{{ data.location }}</span>
+  <div class="header-container">
+    <div class="left-block">
+      <img [src]="data.image" [alt]="data.institution" />
+      <div class="header-titles">
+        <mat-card-title class="title">{{ data.title }}</mat-card-title>
+        <mat-card-subtitle class="subtitle">
+          <mat-icon>{{ data.icon || 'school' }}</mat-icon>
+          {{ data.institution }}
+        </mat-card-subtitle>
       </div>
     </div>
-  
-    <mat-card-content>
-      <p>{{ data.subtitle }}</p>
-    </mat-card-content>
-  
-    <mat-card-footer>
-      <mat-chip-set>
-        @for (tag of data.tags; track $index) {
-            <mat-chip>
-              <i class="devicon-{{ tag.toLowerCase() }}-plain colored"></i>
-              {{ tag }}
-            </mat-chip>
-        }
-      </mat-chip-set>
-    </mat-card-footer>
-  </mat-card>
-  
+    <div class="right-block">
+      <span>{{ data.period }}<br />{{ data.location }}</span>
+    </div>
+  </div>
+
+  <mat-card-content>
+    <p>{{ data.subtitle }}</p>
+  </mat-card-content>
+
+  <mat-card-footer>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; padding: 16px;">
+      @for (tag of data.tags; track $index) {
+      <app-tech-chip [name]="tag"></app-tech-chip>
+      }
+    </div>
+  </mat-card-footer>
+</mat-card>

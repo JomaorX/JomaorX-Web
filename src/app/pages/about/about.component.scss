@@ -1,4 +1,3 @@
-
 /* General Resets and Layout */
 * {
     box-sizing: border-box;
@@ -22,12 +21,18 @@
 
 /* Card Styling */
 mat-card {
-    background-color: var(--h-bg);
+    /* Glassmorphism */
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
     border-radius: 12px;
-    /* Bordes más suaves para un look moderno */
-    border: 4px solid var(--bdr-c1);
-    /* Sombra más pronunciada */
     padding: 15px 0 15px 0;
+
+    /* Ensure text contrast */
+    color: #e2e8f0;
 }
 
 /* Header Styling */
@@ -45,7 +50,7 @@ mat-card-title-group {
     flex-direction: row-reverse;
     /* Apila el título, subtítulo e imagen */
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     /* Centra los elementos apilados */
     gap: 30px;
     /* Espacio entre los elementos del grupo */
@@ -76,19 +81,16 @@ mat-card-title-group img:hover {
 
 mat-card-title {
     font-size: 2em;
-    /* Título más grande */
     font-weight: 700;
-    /* Negrita */
     margin-bottom: 5px;
-    color: var(--a-h2);
-    /* Un gris claro para el título */
+    color: #f1f5f9;
+    /* White text */
 }
 
 mat-card-subtitle {
     font-size: 1.3em;
-    /* Subtítulo un poco más grande */
-    color: var(--h-h2);
-    /* Un gris más oscuro para el subtítulo */
+    color: #94a3b8;
+    /* Slate 400 */
 }
 
 /* Content Styling */
@@ -100,11 +102,13 @@ mat-card-content {
     /* Espaciado vertical para el contenido */
     line-height: 1.6;
     /* Mejor legibilidad */
-    color: var(--a-p);
+    color: #cbd5e1;
+    /* Slate 300 */
     /* Color de texto para el contenido */
     text-align: center;
     /* Centrar el texto en general */
-    font-weight: 600;
+    font-weight: 400;
+    /* Lighter weight for modern look */
 }
 
 p {
@@ -188,7 +192,7 @@ mat-icon {
     mat-card-title-group img {
         width: 100px;
         height: 100px;
-    } 
+    }
 
     mat-accordion {
         margin-bottom: 10px;
