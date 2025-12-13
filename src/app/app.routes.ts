@@ -9,7 +9,7 @@ import { ConstructionComponent } from './components/construction/construction.co
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about-me', component: AboutComponent },
-  { path: 'proyects', component: ProjectsComponent },
+  { path: 'projects', component: ProjectsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'projects/:id', component: ProjectDetailComponent },
   { path: 'construction', component: ConstructionComponent },
