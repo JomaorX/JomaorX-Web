@@ -1,7 +1,25 @@
-/* Contenedor principal: divide en 2 columnas */
+/* project-card.component.scss */
+/* Reuse Glass variables logic via local override or global vars */
+/* Default (Light Mode) */
+$card-bg: rgba(255, 255, 255, 0.6);
+$card-border: #cbd5e1;
+/* Slate 300 - Solid */
+$text-primary: #0f172a;
+$text-secondary: #475569;
+$highlight: #2563eb;
+/* Blue 600 */
+
+:host {
+    display: block;
+    margin-bottom: 3rem;
+}
+
+/* Contenedor principal: Glass Card */
 .item-container {
-    background-color: var(--p-bg-card2);
-    border: 3px solid var(--p-ti-bg-card);
+    background: $card-bg;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid $card-border;
     display: grid;
     grid-template-columns: 3fr 1.5fr;
     align-items: center;
@@ -9,154 +27,188 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    /* Matched to Project Detail */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+
+    /* Dark Mode Overrides */
+    :host-context(.dark-theme) & {
+        background: rgba(30, 41, 59, 0.6);
+        /* Slate 800 glass */
+        border-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        border-color: $text-primary;
+        /* Highlight border */
+
+        :host-context(.dark-theme) & {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+    }
 }
 
-/* Laptop */
+/* Laptop Container */
 .laptop-container {
     transform: scale(1.12);
     position: relative;
     width: 100%;
     max-width: 700px;
+    transition: transform 0.3s ease;
+}
+
+.item-container:hover .laptop-container {
+    transform: scale(1.15) translateY(-5px);
 }
 
 .laptop-image {
     width: 100%;
     display: block;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    /* Added realistic shadow */
 }
 
 .laptop-screen {
-    background-color: #333;
+    background-color: #000;
     position: absolute;
     top: 10.6%;
     left: 14.9%;
     width: 70.7%;
     height: 73.6%;
+    overflow: hidden;
+    /* Prevent overflow */
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* CHANGED to cover to fill screen nicely */
+    }
 }
 
-/* Hover Effects */
-.item-container {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.item-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.item-container:hover .laptop-container {
-    transform: scale(1.15) translateY(-5px);
-    /* Slightly larger scale on hover */
-    transition: transform 0.3s ease;
-}
-
-/* Smooth button transition */
-a[matButton] {
-    /* Existing styles */
-    transition: all 0.3s ease;
-}
-
-a[matButton]:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.laptop-screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* Info del proyecto */
+/* Info Column */
 .info-item {
-    padding: 30px 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    /* Align left for cleaner look */
+    gap: 1rem;
 }
 
-/* Título y subtítulo */
+/* Typography */
 .title-item {
-    text-align: center;
-    color: var(--p-ti-bg-card);
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 12px;
+    text-align: left;
+    color: $text-primary;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+    background: linear-gradient(to right, #0f172a 0%, #2563eb 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    :host-context(.dark-theme) & {
+        background: linear-gradient(to right, #ffffff 0%, #7dd3fc 100%);
+        -webkit-background-clip: text;
+    }
 }
 
 .subtitle-item {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    color: var(--p-sub-col);
-    margin-bottom: 20px;
-    text-align: center;
+    color: $text-secondary;
+    margin: 0;
+    text-align: left;
+    line-height: 1.6;
+
+    :host-context(.dark-theme) & {
+        color: #cbd5e1;
+    }
 }
 
 /* Chips */
 .chip-center {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 15px;
-    max-width: 320px;
+    gap: 0.8rem;
+    margin: 0.5rem 0 1.5rem 0;
 }
 
-.chip-center mat-chip {
-    background: var(--mc-bg) !important;
-    border-radius: 16px;
-    font-weight: 500;
-    padding: 0.3rem 0.6rem;
-
-    i {
-        vertical-align: middle;
-        font-size: 1.4rem;
-        margin-right: 4px;
-    }
-}
-
-/* Botón */
+/* Button */
 a[matButton] {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 10px 20px;
-    background: var(--p-ti-bg-card);
-    color: var(--p-but-col);
-    text-decoration: none;
-    border-radius: 6px;
+    align-self: flex-start;
+    padding: 0 2rem;
+    height: 48px;
+    border-radius: 12px;
+    font-size: 1rem;
     font-weight: 600;
-    transition: background 0.3s ease;
+    background: $text-primary;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3);
 
-    mat-icon {
-        font-size: 1.2rem;
+    :host-context(.dark-theme) & {
+        background: #38bdf8;
+        /* Sky 400 */
+        color: #0f172a;
+        box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 }
+
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .item-container {
         grid-template-columns: 1fr;
-        padding: 20px 10px;
+        gap: 20px;
+        padding: 30px 20px;
     }
 
     .info-item {
+        align-items: center;
         text-align: center;
-        padding: 20px 10px;
     }
 
     .title-item {
-        font-size: 1.6rem;
+        text-align: center;
+        font-size: 2rem;
     }
 
     .subtitle-item {
-        font-size: 1rem;
+        text-align: center;
     }
 
     .chip-center {
         justify-content: center;
-        max-width: 100%;
+    }
+
+    a[matButton] {
+        align-self: center;
+    }
+
+    .laptop-container {
+        /* Centering the laptop visually */
+        left: 50%;
+        transform: translateX(-50%) scale(1.1);
+        margin-bottom: -2rem;
+        /* Pull content up slightly */
+    }
+
+    .item-container:hover .laptop-container {
+        transform: translateX(-50%) scale(1.15);
     }
 }
