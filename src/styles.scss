@@ -17,9 +17,14 @@
 
   /* Light Theme (Default) */
   --s-bg: #f1f5f9;
-  /* Slate 100 */
-  --s-bgi: url("https://www.transparenttextures.com/patterns/subtle-dots.png"),
+
+  /* "Dark Dotted 2" (Real Dark Texture) + Blue Spotlight + Gradient */
+  --s-bgi: url("https://www.transparenttextures.com/patterns/dark-dotted-2.png"),
+    radial-gradient(circle at top left, rgba(14, 165, 233, 0.15) 0%, transparent 60%),
     linear-gradient(to bottom, #f1f5f9 0%, #cbd5e1 100%);
+
+  --s-bg-size: auto, 100% 100%, 100% 100%;
+  /* Auto size for image tiles */
 
   --text-primary: #0f172a;
   --text-secondary: #334155;
@@ -39,11 +44,9 @@ body {
   /* Global Background Application */
   background-color: var(--s-bg);
   background-image: var(--s-bgi);
-  background-repeat: repeat;
-  /* Textures usually repeat */
+  background-repeat: repeat, no-repeat, no-repeat;
   background-attachment: fixed;
-  background-size: auto;
-  /* Keep texture at original scale, gradient will stretch if separated but here they are combined. */
+  background-size: var(--s-bg-size);
 
   color: var(--text-primary);
 }
@@ -159,13 +162,15 @@ mat-chip-set {
   //chips
   @include mat.chips-overrides((label-text-color: #ddd));
 
-  /* DARK THEME BACKGROUND */
+  /* DARK THEME BACKGROUND (RESTORED ORIGINAL) */
   --s-bg: #0f172a;
-  /* Slate 900 */
-  /* "Subtle Dots" Texture + Deep Gradient */
+
+  /* Original "Subtle Dots" (White) + Radial + Linear */
   --s-bgi: url("https://www.transparenttextures.com/patterns/subtle-dots.png"),
     radial-gradient(circle at top left, rgba(56, 189, 248, 0.15) 0%, transparent 50%),
     linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
+
+  --s-bg-size: auto, 100% 100%, 100% 100%;
 
   --text-primary: #f1f5f9;
   --text-secondary: #cbd5e1;
