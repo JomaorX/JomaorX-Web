@@ -63,8 +63,6 @@ $highlight: #2563eb;
         width: 60px;
         height: 60px;
         object-fit: contain;
-        background: white;
-        /* Always white bg for logos */
         padding: 5px;
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -86,7 +84,6 @@ $highlight: #2563eb;
 
     :host-context(.dark-theme) & {
         color: #f1f5f9;
-        /* Highlight title in Dark Mode */
     }
 }
 
