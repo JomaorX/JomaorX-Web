@@ -33,7 +33,34 @@
     left: 14.9%;
     width: 70.7%;
     height: 73.6%;
-    overflow: hidden;
+}
+
+/* Hover Effects */
+.item-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.item-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.item-container:hover .laptop-container {
+    transform: scale(1.15) translateY(-5px);
+    /* Slightly larger scale on hover */
+    transition: transform 0.3s ease;
+}
+
+/* Smooth button transition */
+a[matButton] {
+    /* Existing styles */
+    transition: all 0.3s ease;
+}
+
+a[matButton]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .laptop-screen img {
