@@ -1,153 +1,156 @@
 <!-- project-detail.component.html -->
 @if (!project) {
-<div class="loading-spinner">
-  <div class="text-load">
-    <h2>
-      Cargando Proyecto
-      <mat-icon>traffic</mat-icon>
-    </h2>
-  </div>
-  <mat-spinner></mat-spinner>
+<div class="loading-container">
+  <mat-spinner diameter="50" color="accent"></mat-spinner>
+  <p>Cargando experiencia...</p>
 </div>
 } @else {
-<div class="main-container">
-  <section class="con container-1">
-    <div class="header-content">
-      <h1>{{ project.title }}</h1>
-      <span class="project-status" [class]="'status-' + project.status">
+<div class="project-wrapper">
+
+  <!-- Hero Section with Blurry Background -->
+  <div class="hero-section">
+    <div class="hero-bg" [style.backgroundImage]="'url(' + (project.photos[0] || 'assets/placeholder.jpg') + ')'"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="status-badge" [class]="'status-' + project.status">
         {{
-          project.status === "development"
-            ? "EN DESARROLLO"
-            : project.status === "live"
-            ? "DISPONIBLE"
-            : "ARCHIVADO"
+        project.status === "development"
+        ? "● EN DESARROLLO"
+        : project.status === "live"
+        ? "● DISPONIBLE"
+        : "● ARCHIVADO"
         }}
-      </span>
+      </div>
+      <h1 class="title">{{ project.title }}</h1>
+      <p class="subtitle">{{ project.subtitle }}</p>
+
+      <div class="hero-actions">
+        @if (project.link !== '') {
+        <a mat-flat-button color="accent" href="{{ project.link }}" target="_blank" class="action-btn">
+          <mat-icon>rocket_launch</mat-icon> Ver Demo
+        </a>
+        }
+        @if (typeof project.code === 'string') {
+        <a mat-stroked-button class="glass-btn" href="{{ project.code }}" target="_blank">
+          <mat-icon>code</mat-icon> Código
+        </a>
+        } @else {
+        <a mat-stroked-button class="glass-btn" href="{{ project.code.front }}" target="_blank">
+          <mat-icon>code</mat-icon> Frontend
+        </a>
+        <a mat-stroked-button class="glass-btn" href="{{ project.code.back }}" target="_blank">
+          <mat-icon>storage</mat-icon> Backend
+        </a>
+        }
+      </div>
     </div>
-    <p class="project-subtitle">{{ project.subtitle }}</p>
-    @if (project.link !== '') {
-      <a
-      mat-flat-button
-      color="primary"
-      href="{{ project.link }}"
-      target="_blank"
-      class="demo-button"
-    >
-      <mat-icon>public</mat-icon>
-      Ver Demo
-    </a>
-    }
-  </section>
-
-  <section class="con container-2">
-    <div class="laptop-container">
-      <img src="pantalla.png" alt="Laptop" class="laptop-image" />
-      <div class="laptop-screen">
-  <div class="carousel-container">
-  <button mat-icon-button class="carousel-nav left" (click)="prevPhoto()">
-    <mat-icon>chevron_left</mat-icon>
-  </button>
-
-  <div class="carousel-image-wrapper" (click)="openImageModal()">
-    <img
-      [src]="project.photos[currentPhotoIndex]"
-      alt="Foto del proyecto {{ project.title }}"
-      class="carousel-image"
-    />
-    <mat-icon class="zoom-icon">search</mat-icon>
   </div>
 
-  <button mat-icon-button class="carousel-nav right" (click)="nextPhoto()">
-    <mat-icon>chevron_right</mat-icon>
-  </button>
-</div>
+  <!-- Main Content Grid -->
+  <div class="content-container">
 
-</div>
+    <!-- Left Column: Visuals & Tech -->
+    <div class="content-main">
+
+      <!-- Gallery / Preview Section -->
+      <section class="glass-panel gallery-panel">
+        <div class="panel-header">
+          <h3><mat-icon>perm_media</mat-icon> Galería</h3>
+        </div>
+        <div class="carousel-container">
+          <button mat-icon-button class="nav-btn prev" (click)="prevPhoto()">
+            <mat-icon>chevron_left</mat-icon>
+          </button>
+
+          <div class="image-stage" (click)="openImageModal()">
+            <img [src]="project.photos[currentPhotoIndex]" alt="Project Preview" class="current-image">
+            <div class="zoom-indicator"><mat-icon>zoom_in</mat-icon></div>
+          </div>
+
+          <button mat-icon-button class="nav-btn next" (click)="nextPhoto()">
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+
+          <div class="dots-indicator">
+            @for (photo of project.photos; track $index) {
+            <span class="dot" [class.active]="$index === currentPhotoIndex"></span>
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- Description Section -->
+      <section class="glass-panel description-panel">
+        <div class="panel-header">
+          <h3><mat-icon>description</mat-icon> Sobre el proyecto</h3>
+        </div>
+        <div class="text-content">
+          {{ project.description }}
+        </div>
+
+        <div class="things-grid">
+          @for (thing of project.things; track $index) {
+          <div class="thing-card">
+            <mat-icon>check_circle_outline</mat-icon>
+            <span>{{ thing }}</span>
+          </div>
+          }
+        </div>
+      </section>
 
     </div>
-  </section>
 
-  <!-- Actualiza la sección de descripción para mejor formato -->
-  <section class="con container-3">
-    <h3>Descripción</h3>
-    <div class="description-content">
-      <!-- Usa <pre> para mantener saltos de línea -->
-      <span>{{ project.description }}</span>
-      <ul class="things-list">
-        @for (thing of project.things; track $index) {
-        <li class="thing-item">
-          <mat-icon class="thing-icon">arrow_right</mat-icon>
-          <span>{{ thing }}</span>
-        </li>
-        }
-      </ul>
+    <!-- Right Column: Details & Insights -->
+    <div class="content-sidebar">
+
+      <!-- Tech Stack -->
+      <section class="glass-panel tech-panel">
+        <div class="panel-header">
+          <h3><mat-icon>handyman</mat-icon> Stack Tecnológico</h3>
+        </div>
+        <div class="tech-chips">
+          @for (skill of project.skills; track $index) {
+          <div class="tech-chip">
+            <i class="devicon-{{ skill.toLowerCase() }}-plain colored"></i>
+            <span>{{ skill }}</span>
+          </div>
+          }
+        </div>
+      </section>
+
+      <!-- Key Features -->
+      <section class="glass-panel features-panel">
+        <div class="panel-header">
+          <h3><mat-icon>stars</mat-icon> Funcionalidades</h3>
+        </div>
+        <ul class="clean-list">
+          @for (feature of project.features; track $index) {
+          <li>
+            <mat-icon class="bullet-icon">bolt</mat-icon>
+            <span>{{ feature }}</span>
+          </li>
+          }
+        </ul>
+      </section>
+
+      <!-- Learnings -->
+      <section class="glass-panel learnings-panel">
+        <div class="panel-header">
+          <h3><mat-icon>school</mat-icon> Aprendizajes</h3>
+        </div>
+        <ul class="clean-list">
+          @for (learning of project.learnings; track $index) {
+          <li>
+            <mat-icon class="bullet-icon">lightbulb</mat-icon>
+            <span>{{ learning }}</span>
+          </li>
+          }
+        </ul>
+      </section>
+
     </div>
-  </section>
 
-  <!-- Mejora la sección de aprendizajes -->
-  <section class="con container-learnings">
-    <h3>Aprendizajes</h3>
-    <ul class="learnings-list">
-      @for (learning of project.learnings; track $index) {
-      <li class="learning-item">
-        <mat-icon class="learning-icon">arrow_right</mat-icon>
-        <span>{{ learning }}</span>
-      </li>
-      }
-    </ul>
-  </section>
-
-  <section class="con container-features">
-    <h3>Funcionalidades clave</h3>
-    <ul class="features-list">
-      @for (feature of project.features; track $index) {
-      <li class="feature-item">
-        <mat-icon class="feature-icon">arrow_right</mat-icon>
-        <span>{{ feature }}</span>
-      </li>
-      }
-    </ul>
-  </section>
-
-  <section class="con container-4">
-    <h3>Herramientas utilizadas</h3>
-    <mat-chip-set>
-      @for (skill of project.skills; track $index) {
-      <mat-chip>
-        <i
-          class="devicon-{{ skill.toLowerCase() }}-plain colored"
-        ></i>
-        {{ skill }}
-      </mat-chip>
-      }
-    </mat-chip-set>
-  </section>
-
-  <section class="con container-4 links-section">
-    <h3>Enlaces</h3>
-    <div class="buttons-container">
-      @if(project.link !== ''){
-        <a matFab extended href="{{ project.link }}" target="_blank">
-        <mat-icon>public</mat-icon>
-        Demo
-      </a>
-      }
-      @if (typeof project.code === 'string') {
-      <a matFab extended href="{{ project.code }}" target="_blank">
-        <mat-icon>code</mat-icon>
-        Código
-      </a>
-      } @else {
-      <a matFab extended href="{{ project.code.front }}" target="_blank">
-        <mat-icon>code</mat-icon>
-        Frontend
-      </a>
-      <a matFab extended href="{{ project.code.back }}" target="_blank">
-        <mat-icon>code</mat-icon>
-        Backend
-      </a>
-      }
-    </div>
-  </section>
+  </div>
 </div>
 }
