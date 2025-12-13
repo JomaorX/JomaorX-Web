@@ -19,7 +19,7 @@ export class ProjectService {
         'Autenticación con roles (USER, MODERATOR, ADMIN)',
         'Creación y consulta de posts por tipo de contenido',
         'Validación inteligente entre categorías y tipos',
-        'Sistema de comentarios vinculado a usuarios y posts *(en desarrollo)*',
+        'Sistema de comentarios vinculado a usuarios y posts',
       ],
       learnings: [
         'Autenticación con JWT y Spring Security',
