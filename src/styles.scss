@@ -257,3 +257,12 @@ mat-chip-set {
     padding: 0;
   }
 }
+
+/* GLOBAL SIDENAV Z-INDEX FIX */
+.mat-drawer-backdrop {
+  z-index: 20000 !important;
+}
+
+.mat-drawer {
+  z-index: 20001 !important;
+}

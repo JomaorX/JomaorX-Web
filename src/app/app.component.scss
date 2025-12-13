@@ -9,3 +9,14 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
+
+/* Ensure Header stays on top of content (Project Details Glass) */
+app-header {
+    position: relative;
+    z-index: 100;
+}
+
+.app-content {
+    position: relative;
+    z-index: 1;
+}

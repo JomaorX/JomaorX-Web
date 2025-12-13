@@ -12,6 +12,10 @@
     display: none;
     height: fit-content;
     background-color: var(--header-bg);
+    z-index: 20000 !important;
+    /* Force top layer */
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3);
+    /* Add shadow for depth */
 
     a,
     mat-icon,
@@ -63,6 +67,8 @@
     align-items: center;
     background-color: var(--header-bg);
     color: var(--header-text);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Ensure separation from content */
 }
 
 /* Logo */

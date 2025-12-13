@@ -63,9 +63,7 @@ $highlight: #2563eb;
     transition: transform 0.3s ease;
 }
 
-.item-container:hover .laptop-container {
-    transform: scale(1.15) translateY(-5px);
-}
+
 
 .laptop-image {
     width: 100%;
@@ -208,7 +206,5 @@ a[matButton] {
         /* Pull content up slightly */
     }
 
-    .item-container:hover .laptop-container {
-        transform: translateX(-50%) scale(1.15);
-    }
+
 }
