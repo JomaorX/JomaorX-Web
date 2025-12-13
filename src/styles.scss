@@ -51,6 +51,18 @@ body {
   color: var(--text-primary);
 }
 
+/* Global Text Selection Override */
+::selection {
+  background: #38bdf8;
+  /* Corporate/Sky Blue */
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #38bdf8;
+  color: #ffffff;
+}
+
 
 /* Skills Section */
 mat-chip-set {
